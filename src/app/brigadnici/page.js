@@ -1,7 +1,8 @@
 
-
 export default function Work() {
 
+    return(
 
-    return <h1>brigadnici</h1>;
+        <h1>brigadnici</h1>
+    );
 }
