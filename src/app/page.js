@@ -1,13 +1,13 @@
 import BulletList from "@/common/BulletList/BulletList";
 import Image from "next/image";
-import Button from "@/common/Buttons/Button";
 import ActionButton from "@/common/Buttons/ActionButton";
+import LogoList from "@/common/LogoList/LogoList";
 
 export default function Homepage() {
   return (
       <>
         <div className="h-[40vh] bg-background-primary pt-20 pb-20 rounded-bl-[5vw] rounded-br-[5vw]
-                        mb-[-8vh] relative z-10">
+                      mb-[-8vh] relative z-10">
           <div className="w-10/12 mx-auto flex flex-row">
             <div className="w-1/2"></div>
           </div>
@@ -44,8 +44,12 @@ export default function Homepage() {
                 <ActionButton text={"Kontaktujte nás nyní"} link={""}/>
               </div>
             </div>
+          </div>
+        </div>
 
-
+        <div className="mt-10 mb-10 lg:mt-20 lg:mb-20 flex flex-row">
+          <div className="rounded-[1vw] bg-background-secondary w-10/12 mx-auto">
+            <LogoList/>
           </div>
         </div>
       </>
