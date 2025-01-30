@@ -1,7 +1,10 @@
-
+import {FooterForm} from "@/common/FooterForm";
 
 export default function Client() {
 
-
-    return <h1>klienti</h1>;
+    return (
+        <div>
+            <h1>klienti</h1>
+        </div>
+    );
 }

@@ -7,7 +7,7 @@ body {
 }
 
 @layer base {
-  html {
+  :root {
     --color-text-primary: #FCFBF9;
     --color-text-secondary: #2E453D;
 
@@ -19,7 +19,18 @@ body {
     --color-background-primary: #FCFBF9;
     --color-background-secondary: #EAE4D8;
     --color-background-tertiary: #2E453D;
+    --radius: 0.5rem;
   }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
 }
 
 
