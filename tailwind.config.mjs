@@ -6,11 +6,28 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+    fontSize: {
+      xs: "12px",
+      sm: "14px",
+      base: "16px",
+      lg: "18px",
+      xl: "20px",
+      "2xl": "28px",
+      "3xl": "34px",
+      "4xl": "44px",
+      "5xl": "54px",
+      "6xl": "66px",
+    },
+    colors: {
+      background: {
+        primary: "var(--color-background-primary)",
+        secondary: "var(--color-background-secondary)",
+        tertiary: "var(--color-background-tertiary)",
       },
+      text: {
+        primary: "var(--color-text-primary)",
+        secondary: "var(--color-text-secondary)",
+      }
     },
   },
   plugins: [],
