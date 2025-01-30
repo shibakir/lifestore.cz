@@ -29,6 +29,11 @@ export default {
         secondary: "var(--color-text-secondary)",
       }
     },
+    extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
