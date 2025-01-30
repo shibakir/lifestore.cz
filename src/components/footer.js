@@ -1,5 +1,5 @@
 import Social from "@/common/Social";
-import Button from "@/common/Button";
+import Button from "@/common/Buttons/Button";
 
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";

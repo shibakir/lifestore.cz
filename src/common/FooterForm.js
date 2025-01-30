@@ -15,7 +15,7 @@ import { Input } from "@/components/ui/input"
 
 import {formSchema} from "@/schemas/schema"
 
-import SubmitButton from "@/common/SubmitButton";
+import SubmitButton from "@/common/Buttons/SubmitButton";
 
 export function FooterForm() {
 
