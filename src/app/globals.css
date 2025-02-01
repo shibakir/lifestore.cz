@@ -24,6 +24,7 @@ xl 1280
     --color-background-primary: #FCFBF9;
     --color-background-secondary: #EAE4D8;
     --color-background-tertiary: #2E453D;
+    --color-background-quaternary: #BCCDA0;
     --radius: 0.5rem;
   }
 }

@@ -2,7 +2,7 @@ import { Button as ShadCNButton } from '@/components/ui/button';
 import Link from 'next/link';
 import clsx from 'clsx';
 
-export default function HeroButton({ text, link, className=""}) {
+export default function HomepageHeroButton({ text, link, className=""}) {
     return (
         <ShadCNButton
             className={clsx(
@@ -13,7 +13,7 @@ export default function HeroButton({ text, link, className=""}) {
         >
             <Link
                 href={link}
-                className="inline-flex w-full h-full justify-center items-center text-xs xl:text-lg font-semibold"
+                className="inline-flex w-full h-full justify-center items-center text-xs xl:text-xl"
             >
                 {text}
             </Link>

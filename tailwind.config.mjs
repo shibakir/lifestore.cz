@@ -28,7 +28,8 @@ module.exports = {
   			background: {
   				primary: 'var(--color-background-primary)',
   				secondary: 'var(--color-background-secondary)',
-  				tertiary: 'var(--color-background-tertiary)'
+  				tertiary: 'var(--color-background-tertiary)',
+				quaternary: 'var(--color-background-quaternary)'
   			},
   			text: {
   				primary: 'var(--color-text-primary)',

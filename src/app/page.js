@@ -1,14 +1,14 @@
-import BulletList from "@/common/BulletList/BulletList";
+import BulletListHomepage from "@/common/BulletList/BulletListHomepage";
 import Image from "next/image";
 import LogoList from "@/common/LogoList/LogoList";
 import DoubleImageSection from "@/common/Sections/DoubleImageSection";
 import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
-import HeroSection from "@/common/Sections/HeroSection";
+import HeroSectionHomepage from "@/common/Sections/HeroSectionHomepage";
 
 export default function Homepage() {
   return (
       <>
-        <HeroSection />
+        <HeroSectionHomepage />
 
         <div className="mt-10 mb-10 lg:mt-20 lg:mb-20">
           <div className="main flex flex-col lg:flex-row lg:space-x-10">
