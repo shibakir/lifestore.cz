@@ -33,4 +33,23 @@ body {
   flex: 1;
 }
 
+/* Images container DoubleImageSection */
+
+.twoImagesParentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.twoImagesParentContainer img {
+  width: calc(50% - 5px);
+}
+
+@media (min-width: 600px) {
+  .twoImagesParentContainer img {
+    width: auto;
+  }
+}
+
+
 

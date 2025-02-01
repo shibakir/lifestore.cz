@@ -3,6 +3,7 @@ import Image from "next/image";
 import ActionButton from "@/common/Buttons/ActionButton";
 import LogoList from "@/common/LogoList/LogoList";
 import DoubleImageSection from "@/common/Sections/DoubleImageSection";
+import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
 
 export default function Homepage() {
   return (
@@ -32,18 +33,18 @@ export default function Homepage() {
               />
             </div>
             <div className="w-full lg:w-1/2 lg:ml-10 2xl:w-4/12 flex flex-col lg:justify-end lg:items-start">
-              <h2 className="mt-5 lg:mt-0 text-xl font-bold">Poptáváte hostesky? To je naše parketa!</h2>
-              <p className="mt-3 mb-10">
-                Od roku 2011 jsme zajistili tisíce hostesek a promotérů.<br/>
-                Náš profesionální tým připravíme na akci dle vašich specifických<br/>
-                požadavků – to zahrnuje oblečení, líčení a účes. Předností<br/>
-                Lifestore je flexibilita a zajištění personálu na poslední chvíli.<br/>
-                Nabízíme spolehlivost, kvalitu a individuální přístup, protože<br/>
-                váš úspěch je pro nás vždy na prvním místě.
-              </p>
-              <div>
-                <ActionButton text={"Kontaktujte nás nyní"} link={""}/>
-              </div>
+                <TextSectionWithButton
+                    className="mt-5"
+                    title={"Poptáváte hostesky? To je naše parketa!"}
+                    buttonText={"Kontaktujte nás nyní"}
+                    link={""}
+                    text={"Od roku 2011 jsme zajistili tisíce hostesek a promotérů." +
+                        " Náš profesionální tým připravíme na akci dle vašich specifických" +
+                        " požadavků – to zahrnuje oblečení, líčení a účes. Předností" +
+                        " Lifestore je flexibilita a zajištění personálu na poslední chvíli." +
+                        " Nabízíme spolehlivost, kvalitu a individuální přístup, protože" +
+                        " váš úspěch je pro nás vždy na prvním místě."}
+                />
             </div>
           </div>
         </div>
@@ -55,12 +56,14 @@ export default function Homepage() {
         </div>
 
         <DoubleImageSection
+            className="xl:mb-36"
             title="Brigádníci pro restaurace, bary a hotely"
             text="Potřebujete rychle spolehlivý personál? Zajistíme snídaňové hostesky, debaras, obsluhu i recepci – zvládneme to i na poslední chvíli. Vyřešíme výpadky ve vašem týmu, seženeme kvalitní náhradu a ušetříme vám čas se zaškolováním. Zaměřte se na svůj byznys, my zajistíme zbytek."
             buttonText="Zjistit více o našich službách"
         />
         <DoubleImageSection
             reverse
+            className="xl:mb-36"
             title="Brigáda, která vás bude bavit"
             text="Připojte se k Lifestore a otevřete si dveře do světa prestižních eventů! Nabízíme flexibilní pracovní směny, zaškolení, a na většině akcí poskytujeme i stravování. Staňte se součástí týmu, který realizuje nejvýznamnější akce v České republice a vyjíždí i na mezinárodní eventy. Začněte svou kariéru v event managementu s Lifestore ještě dnes!"
             buttonText="Přidejte se k našemu týmu"

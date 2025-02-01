@@ -1,14 +1,18 @@
 import Image from "next/image";
-import ActionButton from "@/common/Buttons/ActionButton";
+import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
+import clsx from "clsx";
 
-export default function DoubleImageSection({ reverse, title, text, buttonText }) {
+export default function DoubleImageSection({ reverse, title, text, buttonText, link="", className=""}) {
     return (
-        <div className="mt-10 mb-10 lg:mt-20 lg:mb-20">
+        <div
+            className={clsx(className,
+                "mt-10 mb-10 lg:mt-20 lg:mb-20"
+            )}
+            >
             <div className={`w-10/12 mx-auto flex flex-col sm:flex-row ${reverse ? "sm:flex-row-reverse" : ""}`}>
-                <div className="sm:w-1/2 2xl:w-8/12">
-                    <div className={`w-full flex flex-row space-x-10 sm:space-x-0 xl:space-x-10 ${reverse ? "sm:justify-end" : "justify-start"}`}>
+                <div className="mt-10 sm:w-1/2 2xl:w-8/12">
+                    <div className={`twoImagesParentContainer xl:space-x-5 ${reverse ? "sm:justify-end" : "justify-start"}`}>
                         <Image
-                            className="max-w-[150px] sm:max-w-[250px] md:max-w-[350px] 3xl:max-w-[453px] h-auto"
                             src="/homepage-small.png"
                             alt="workers"
                             width={435}
@@ -16,7 +20,6 @@ export default function DoubleImageSection({ reverse, title, text, buttonText })
                             unoptimized
                         />
                         <Image
-                            className="block sm:hidden 2xl:block max-w-[150px] sm:max-w-[250px] md:max-w-[350px] 3xl:max-w-[453px] h-auto"
                             src="/homepage-small.png"
                             alt="workers"
                             width={435}
@@ -27,9 +30,13 @@ export default function DoubleImageSection({ reverse, title, text, buttonText })
                 </div>
                 <div className="w-11/12 md:w-1/2 2xl:w-4/12 flex flex-col justify-end items-start">
                     <div className={`${!reverse ? "ml-0 sm:ml-10 lg:ml-0" : "sm:mr-10 lg:mr-0"}`}>
-                            <h2 className="mt-5 lg:mt-0 text-xl font-bold">{title}</h2>
-                            <p className="mt-3 mb-10">{text}</p>
-                            <ActionButton text={buttonText} link={""}/>
+                        <TextSectionWithButton
+                            className="mt-5"
+                            title={title}
+                            buttonText={buttonText}
+                            link={link}
+                            text={text}
+                        />
                     </div>
                 </div>
             </div>
