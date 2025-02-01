@@ -3,22 +3,14 @@ import Image from "next/image";
 import LogoList from "@/common/LogoList/LogoList";
 import DoubleImageSection from "@/common/Sections/DoubleImageSection";
 import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
+import HeroSection from "@/common/Sections/HeroSection";
 
 export default function Homepage() {
   return (
       <>
-        <div className="h-[40vh] bg-background-primary pt-20 pb-20 rounded-bl-[5vw] rounded-br-[5vw]
-                      mb-[-8vh] relative z-10">
-          <div className="main flex flex-row">
-            <div className="w-1/2"></div>
-          </div>
-        </div>
+        <HeroSection />
 
-        <div className="bg-background-tertiary pt-20 pb-20 relative z-0 mt-8">
-          <div className="main flex flex-row">
-            <BulletList/>
-          </div>
-        </div>
+
 
         <div className="mt-10 mb-10 lg:mt-20 lg:mb-20">
           <div className="main flex flex-col lg:flex-row lg:space-x-10">

@@ -11,9 +11,18 @@ export default function TextSectionWithButton({title, text, buttonText, link, cl
                 ""
             )}
         >
-            <Title title={title} className="mb-2"/>
-            <Text text={text} className="mb-10"/>
-            <ActionButton text={buttonText} link={link}/>
+            <Title
+                title={title}
+                className="mb-2"
+            />
+            <Text
+                text={text}
+                className="mb-10"
+            />
+            <ActionButton
+                text={buttonText}
+                link={link}
+            />
         </div>
     )
 }

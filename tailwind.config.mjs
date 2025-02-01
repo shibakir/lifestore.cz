@@ -5,15 +5,15 @@ module.exports = {
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-		"./src/common/**/*.{js,ts,jsx,tsx,mdx}"
+		"./src/common/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+	theme: {
   	fontSize: {
   		xs: '12px',
   		sm: '14px',
   		base: '16px',
   		lg: '18px',
-  		xl: '22px',
+  		xl: '25px',
   		'2xl': '28px',
   		'3xl': '34px',
   		'4xl': '44px',
@@ -21,6 +21,9 @@ module.exports = {
   		'6xl': '66px'
   	},
   	extend: {
+		fontFamily: {
+			montserrat: ['Montserrat', 'sans-serif'],
+		},
   		colors: {
   			background: {
   				primary: 'var(--color-background-primary)',
@@ -37,12 +40,6 @@ module.exports = {
   				'button-3': 'var(--color-button-3)',
   				'button-4': 'var(--color-button-4)'
   			}
-  		},
-  		fontFamily: {
-  			montserrat: [
-  				'Montserrat',
-  				'sans-serif'
-  			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
