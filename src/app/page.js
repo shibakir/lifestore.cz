@@ -1,6 +1,5 @@
 import BulletList from "@/common/BulletList/BulletList";
 import Image from "next/image";
-import ActionButton from "@/common/Buttons/ActionButton";
 import LogoList from "@/common/LogoList/LogoList";
 import DoubleImageSection from "@/common/Sections/DoubleImageSection";
 import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
@@ -10,19 +9,19 @@ export default function Homepage() {
       <>
         <div className="h-[40vh] bg-background-primary pt-20 pb-20 rounded-bl-[5vw] rounded-br-[5vw]
                       mb-[-8vh] relative z-10">
-          <div className="w-10/12 mx-auto flex flex-row">
+          <div className="main flex flex-row">
             <div className="w-1/2"></div>
           </div>
         </div>
 
         <div className="bg-background-tertiary pt-20 pb-20 relative z-0 mt-8">
-          <div className="w-10/12 mx-auto flex flex-row">
+          <div className="main flex flex-row">
             <BulletList/>
           </div>
         </div>
 
         <div className="mt-10 mb-10 lg:mt-20 lg:mb-20">
-          <div className="w-10/12 mx-auto flex flex-col lg:flex-row lg:space-x-10">
+          <div className="main flex flex-col lg:flex-row lg:space-x-10">
             <div className="w-full lg:w-1/2 2xl:w-8/12">
               <Image
                   src="/homepage-2.png"

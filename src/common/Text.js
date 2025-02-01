@@ -8,7 +8,12 @@ export default function Text({ text, className="" }) {
                 "font-light text-sm lg:text-lg"
             )}
         >
-            {text}
+            {text.split("\n").map((line, index) => (
+                <span key={index}>
+                    {line}
+                    <br />
+                </span>
+            ))}
         </p>
     )
 }
