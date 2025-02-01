@@ -1,4 +1,3 @@
-import Social from "@/common/Social";
 import Button from "@/common/Buttons/Button";
 
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -34,25 +33,25 @@ export default function Footer() {
                                     <Button
                                         text="+420 773 530 000"
                                         link="tel:+420773530000"
-                                        className="mr-2 bg-button-button-2 hover:bg-button-button-3 text-text-secondary p-5"
+                                        className="mr-2 bg-button-button-2 hover:bg-button-button-3 text-text-secondary text-base xl:text-lg p-6"
                                     />
                                     <Button
                                         text="marika.pusova@lifestore.cz"
                                         link="mailto:marika.pusova@lifestore.cz"
-                                        className="bg-button-button-2 hover:bg-button-button-3 text-text-secondary p-5"
+                                        className="bg-button-button-2 hover:bg-button-button-3 text-text-secondary text-base xl:text-lg p-6"
                                     />
                                 </div>
                                 <div className="space-x-2 2xl:space-x-5">
                                     <Button
                                         text="lifestore.cz"
                                         link="https://www.lifestore.cz/"
-                                        className="bg-button-button-3 hover:bg-button-button-3 text-text-primary p-5"
+                                        className="bg-button-button-3 hover:bg-button-button-3 text-text-primary text-base xl:text-lg p-6"
                                         icon={faInstagram}
                                     />
                                     <Button
-                                        text="lifestore"
+                                        text="Lifestore"
                                         link="https://www.lifestore.cz/"
-                                        className="bg-button-button-3 hover:bg-button-button-3 text-text-primary p-5"
+                                        className="bg-button-button-3 hover:bg-button-button-3 text-text-primary text-base xl:text-lg p-6"
                                         icon={faFacebookF}
                                     />
                                 </div>
