@@ -10,8 +10,6 @@ export default function Homepage() {
       <>
         <HeroSection />
 
-
-
         <div className="mt-10 mb-10 lg:mt-20 lg:mb-20">
           <div className="main flex flex-col lg:flex-row lg:space-x-10">
             <div className="w-full lg:w-1/2 2xl:w-8/12">
