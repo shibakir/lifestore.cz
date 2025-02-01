@@ -10,14 +10,7 @@ import {
 import NavLink from "@/common/Menu/NavLink"
 import { HiMenu } from "react-icons/hi";
 
-const menuItems = [
-    { name: "Domů", href: "/" },
-    { name: "Pro klienty", href: "/klienti" },
-    { name: "Pro brigádníky", href: "/brigadnici" },
-    { name: "Kontakty", href: "/kontakty" },
-];
-
-export default function MobileMenu({pathname}) {
+export default function MobileMenu({pathname, menuItems}) {
 
     return (
         <DropdownMenu>

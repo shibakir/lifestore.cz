@@ -10,6 +10,13 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import MobileMenu from "@/common/Menu/MobileMenu";
 
+const menuItems = [
+    { name: "Domů", href: "/" },
+    { name: "Pro klienty", href: "/klienti" },
+    { name: "Pro brigádníky", href: "/brigadnici" },
+    { name: "Kontakty", href: "/kontakty" },
+];
+
 export default function Header() {
 
     const pathname = usePathname();
@@ -20,14 +27,21 @@ export default function Header() {
             <div className="w-10/12 mx-auto flex row pt-4 pb-4">
                 <div className="hidden 2xl:flex w-1/3 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
-                        <NavLink href="/" active={pathname === "/"}>Domů</NavLink>
-                        <NavLink href="/klienti" active={pathname === "/klienti"}>Pro klienty</NavLink>
-                        <NavLink href="/brigadnici" active={pathname === "/brigadnici"}>Pro brigádníky</NavLink>
-                        <NavLink href="/kontakty" active={pathname === "/kontakty"}>Kontakty</NavLink>
+                        {menuItems.map((item) => {
+                            return (
+                                <NavLink
+                                    key={item.href}
+                                    href={item.href}
+                                    active={pathname === item.href}
+                                >
+                                    {item.name}
+                                </NavLink>
+                            );
+                        })}
                     </nav>
                 </div>
                 <div className="2xl:hidden block w-1/3">
-                    <MobileMenu pathname={pathname}/>
+                    <MobileMenu pathname={pathname} menuItems={menuItems}/>
                 </div>
                 <div className="w-1/3 flex justify-center items-center">
                     <Link href="/">
