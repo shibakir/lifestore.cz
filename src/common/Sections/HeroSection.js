@@ -1,16 +1,13 @@
 import BulletList from "@/common/BulletList/BulletList";
-import Title from "@/common/Title";
-import Text from "@/common/Text";
-import ActionButton from "@/common/Buttons/ActionButton";
 import HeroButton from "@/common/Buttons/HeroButton";
 
 export default function HeroSection() {
     return (
         <div
-            className="bg-background-tertiary min-h-[calc(100vh-80px)] flex flex-col"
+            className="bg-background-tertiary flex flex-col"
         >
             <div
-                className="h-[25vh] lg:h-[40vw] xl:h-[35vw] bg-[url('/homepage-hero.png')] bg-cover bg-center
+                className="h-[250px] lg:h-[40vw] xl:h-[35vw] bg-[url('/homepage-hero.png')] bg-cover bg-center
                             rounded-bl-[5vw] rounded-br-[5vw] relative">
                 <div className="main flex flex-row h-full">
                     <div className=" w-1/2 flex flex-col justify-center">
@@ -25,7 +22,7 @@ export default function HeroSection() {
                             <HeroButton
                                 text={"Poptat naše služby"}
                                 link={""}
-                                className="bg-background-tertiary"
+                                className="bg-background-tertiary xl:p-7"
                             />
                         </div>
                     </div>

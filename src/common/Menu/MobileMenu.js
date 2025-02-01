@@ -15,7 +15,7 @@ export default function MobileMenu({pathname, menuItems}) {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <button className="p-2">
+                <button>
                     <HiMenu className="text-black" size={30}/>
                 </button>
             </DropdownMenuTrigger>

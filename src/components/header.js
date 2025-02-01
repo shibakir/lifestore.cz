@@ -40,7 +40,7 @@ export default function Header() {
                         })}
                     </nav>
                 </div>
-                <div className="2xl:hidden block w-1/3">
+                <div className="2xl:hidden flex w-1/3">
                     <MobileMenu pathname={pathname} menuItems={menuItems}/>
                 </div>
                 <div className="w-1/3 flex justify-center items-center">
