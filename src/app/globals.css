@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+sm 640
+md 768
+lg 1024
+xl 1280
+2xl 1536
+*/
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -51,11 +59,21 @@ body {
   width: calc(50% - 5px);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .twoImagesParentContainer img {
-    width: auto;
+    width: calc(43% - 5px);
   }
 }
 
+@media (min-width: 1280px) {
+  .twoImagesParentContainer img {
+    width: calc(45% - 5px);
+  }
+}
 
+@media (min-width: 1536px /*2xl*/) {
+  .twoImagesParentContainer img {
+    width: calc(40% - 5px);
+  }
+}
 

@@ -9,9 +9,9 @@ export default function DoubleImageSection({ reverse, title, text, buttonText, l
                 "mt-10 mb-10 lg:mt-20 lg:mb-20"
             )}
             >
-            <div className={`w-10/12 mx-auto flex flex-col sm:flex-row ${reverse ? "sm:flex-row-reverse" : ""}`}>
-                <div className="mt-10 sm:w-1/2 2xl:w-8/12">
-                    <div className={`twoImagesParentContainer xl:space-x-5 ${reverse ? "sm:justify-end" : "justify-start"}`}>
+            <div className={`w-10/12 mx-auto flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}>
+                <div className="mt-10 w-full md:w-1/2 2xl:w-8/12">
+                    <div className={`twoImagesParentContainer xl:space-x-5 ${reverse ? "md:justify-end" : "justify-start"}`}>
                         <Image
                             src="/homepage-small.png"
                             alt="workers"
@@ -29,7 +29,7 @@ export default function DoubleImageSection({ reverse, title, text, buttonText, l
                     </div>
                 </div>
                 <div className="w-11/12 md:w-1/2 2xl:w-4/12 flex flex-col justify-end items-start">
-                    <div className={`${!reverse ? "ml-0 sm:ml-10 lg:ml-0" : "sm:mr-10 lg:mr-0"}`}>
+                    <div className={`${!reverse ? "ml-0 md:ml-10 lg:ml-0" : "md:mr-10 lg:mr-0"}`}>
                         <TextSectionWithButton
                             className="mt-5"
                             title={title}
