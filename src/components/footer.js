@@ -30,11 +30,11 @@ export default function Footer() {
                         </div>
                         <div>
                             <div className="space-y-2 lg:space-y-4">
-                                <div className="space-y-2 lg:space-y-0 lg:space-x-5">
+                                <div className="space-y-2  2xl:space-x-2">
                                     <Button
                                         text="+420 773 530 000"
                                         link="tel:+420773530000"
-                                        className="bg-button-button-2 hover:bg-button-button-3 text-text-secondary p-5"
+                                        className="mr-2 bg-button-button-2 hover:bg-button-button-3 text-text-secondary p-5"
                                     />
                                     <Button
                                         text="marika.pusova@lifestore.cz"
@@ -42,7 +42,7 @@ export default function Footer() {
                                         className="bg-button-button-2 hover:bg-button-button-3 text-text-secondary p-5"
                                     />
                                 </div>
-                                <div className="space-x-2 lg:space-x-5">
+                                <div className="space-x-2 2xl:space-x-5">
                                     <Button
                                         text="lifestore.cz"
                                         link="https://www.lifestore.cz/"
