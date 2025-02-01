@@ -11,7 +11,7 @@ export default function ActionButton({ text, link, className }) {
             )}
             style={{ borderRadius: "9999px" }}
         >
-            <Link href={link} className="inline-flex w-full h-full justify-center items-center font-bold">
+            <Link href={link} className="inline-flex w-full h-full justify-center items-center font-semibold">
                 {text}
             </Link>
         </ShadCNButton>

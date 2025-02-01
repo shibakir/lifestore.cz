@@ -63,7 +63,7 @@ export default function Homepage() {
         />
         <DoubleImageSection
             reverse
-            className="xl:mb-36"
+            className="mb-20 xl:mb-36"
             title="Brigáda, která vás bude bavit"
             text="Připojte se k Lifestore a otevřete si dveře do světa prestižních eventů! Nabízíme flexibilní pracovní směny, zaškolení, a na většině akcí poskytujeme i stravování. Staňte se součástí týmu, který realizuje nejvýznamnější akce v České republice a vyjíždí i na mezinárodní eventy. Začněte svou kariéru v event managementu s Lifestore ještě dnes!"
             buttonText="Přidejte se k našemu týmu"
