@@ -40,7 +40,37 @@ xl 1280
 }
 
 .main {
-  width: 83.3333%; /* 10/12 = 83.33% */
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .main {
+    width: 83.3333%;
+  }
+}
+
+.actionSection {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actionSection .actionSectionText {
+  width: 62.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actionSection .marginContainer {
+  width: 12.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actionSection .actionSectionButton {
+  width: 25%;
   margin-left: auto;
   margin-right: auto;
 }

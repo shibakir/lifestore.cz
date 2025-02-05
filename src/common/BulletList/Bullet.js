@@ -22,7 +22,7 @@ export default function Bullet({ title, text, variant = "default" }) {
             <div className="space-y-1 sm:space-y-2">
                 <h3
                     className={clsx(styleTitle,
-                        "w-11/12 font-bold text-lg sm:text-base leading-none"
+                        "w-11/12 font-bold text-base leading-none"
                     )}
                 >
                     {title}

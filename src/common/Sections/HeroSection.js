@@ -4,11 +4,11 @@ import HeroButton from "@/common/Buttons/HeroButton";
 export default function HeroSection({title, text, buttonText="", link=""}) {
 
     return (
-        <div className="w-full min-h-[594] flex flex-row justify-end">
-            <div className="w-1/2 flex flex-row bg-background-tertiary">
-                <div className="w-1/6"/>
-                <div className="w-5/6 flex flex-col justify-center items-start">
-                    <div className="w-3/4">
+        <div className="w-full lg:min-h-[594] flex flex-col-reverse lg:flex-row justify-end bg-background-tertiary">
+            <div className="lg:w-1/2 flex flex-row main lg:!main:hidden">
+                <div className="lg:w-1/6"/>
+                <div className="lg:w-5/6 flex flex-col justify-center items-start">
+                    <div className="lg:w-3/4 mt-10 mb-10 lg:mt-0 lg:mb-0">
                         <Title
                             title={title}
                             className="text-text-primary"
@@ -28,8 +28,7 @@ export default function HeroSection({title, text, buttonText="", link=""}) {
                     </div>
                 </div>
             </div>
-            <div className="w-1/2 bg-[url('/clients-hero.png')] bg-cover bg-center">
-            </div>
+            <div className="lg:w-1/2 min-h-[294] sm:min-h-[494] lg:min-h-0 bg-[url('/clients-hero.png')] bg-cover bg-center"/>
         </div>
     );
 }

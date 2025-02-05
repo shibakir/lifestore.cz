@@ -12,9 +12,9 @@ export default function TitleBulletSectionWithImage({ title, text }) {
     ];
 
     return (
-        <div className="main flex flex-row pt-36 pb-36">
+        <div className="flex flex-col lg:flex-row pt-12 pb-12 lg:pt-36 lg:pb-36">
             <div
-                className="w-8/12 pr-36"
+                className="lg:w-9/12 lg:pr-36"
             >
                 <div className="flex flex-col w-full">
                     <div className="flex flex-row items-center justify-between pb-8">
@@ -22,17 +22,19 @@ export default function TitleBulletSectionWithImage({ title, text }) {
                             title={title}
                             className="text-text-secondary font-semibold"
                         />
-                        <hr className="w-2/3 h-1 bg-background-quaternary border-none"/>
+                        <hr className="w-1/3 lg:w-2/3 h-1 bg-background-quaternary border-none"/>
                     </div>
-                    <div className="w-3/4">
-                        <Text text={text} />
+                    <div className="lg:w-3/4">
+                        <Text
+                            text={text}
+                        />
                     </div>
                 </div>
                 <div>
                     <BulletList items={items} />
                 </div>
             </div>
-            <div className="w-4/12 bg-[url('/homepage-small.png')] bg-cover bg-center min-h-[513px] rounded-b-[2vw] rounded-t-[2vw]"></div>
+            <div className="lg:w-3/12 ml-20 mr-20 bg-[url('/homepage-small.png')] bg-cover bg-center  rounded-b-[2vw] rounded-t-[2vw]"></div>
         </div>
     )
 }

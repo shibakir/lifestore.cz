@@ -24,7 +24,7 @@ export default function Header() {
     return (
         <header className="bg-background-secondary">
 
-            <div className="w-10/12 mx-auto flex row pt-4 pb-4">
+            <div className="main flex row pt-4 pb-4">
                 <div className="hidden 2xl:flex w-1/3 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
                         {menuItems.map((item) => {
