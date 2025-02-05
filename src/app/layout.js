@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <main className="content">
             {children}
         </main>
-        {pathname.startsWith("/special") ? <Footer/> : <Footer/>}
+        {pathname.startsWith("/special") ? <Footer pathname={pathname}/> : <Footer pathname={pathname}/>}
         </body>
         </html>
     );

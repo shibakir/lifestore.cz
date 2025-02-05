@@ -52,15 +52,31 @@ xl 1280
 }
 
 .actionSection {
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .actionSection {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .actionSection .actionSectionText {
-  width: 62.5%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1024px) { /* lg */
+  .actionSection .actionSectionText {
+    width: 62.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .actionSection .marginContainer {

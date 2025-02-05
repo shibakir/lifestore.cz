@@ -41,7 +41,7 @@ export function FooterForm() {
             />
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="w-full lg:w-3/4 h-full space-y-5 lg:space-y-10"
+                className="w-full h-full space-y-5 lg:space-y-10"
             >
 
                 <FormField

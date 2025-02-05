@@ -1,17 +1,16 @@
 import ActionButton from "@/common/Buttons/ActionButton";
 import Title from "@/common/Title";
 
-export default function ActionSection({}) {
+export default function ActionSection({title, buttonText, link=""}) {
 
     return (
-        <div className="w-6/8">
+        <div className="lg:w-6/8">
             <div className="actionSection bg-background-tertiary pb-4 rounded-[1vw]">
-                <div className="flex flex-row bg-background-secondary rounded-[1vw] p-14">
-                    <div className="actionSectionText flex items-center justify-center">
-                        <div style={{width: "85%"}}>
+                <div className="flex flex-col lg:flex-row bg-background-secondary rounded-[1vw] pt-5 pb-5 lg:p-14 space-y-5">
+                    <div className="actionSectionText flex items-center justify-center ">
+                        <div className="w-full lg:w-8/10 flex sm:text-center lg:text-start">
                             <Title
-                                title={"Neztrácejte čas – kontaktujte nás dnes a zjistěte, " +
-                                    "jak můžeme usnadnit vaši cestu k úspěchu!"}
+                                title={title}
                                 className="text-text-secondary font-semibold"
                             />
                         </div>
@@ -19,8 +18,8 @@ export default function ActionSection({}) {
                     <div className="marginContainer"/>
                     <div className="actionSectionButton flex items-center justify-center">
                         <ActionButton
-                            text={"Kontaktujte nás nyní"}
-                            link={""}
+                            text={buttonText}
+                            link={link}
                             className="xl:p-7 text-lg bg-background-tertiary"
                         />
                     </div>

@@ -39,7 +39,7 @@ export default function Homepage() {
         </div>
 
         <div className="mt-10 mb-10 lg:mt-20 lg:mb-20 flex flex-row">
-          <div className="rounded-[8vw] lg:rounded-[2vw] bg-background-secondary w-10/12 mx-auto">
+          <div className="main rounded-[8vw] lg:rounded-[2vw] bg-background-secondary">
             <LogoList/>
           </div>
         </div>
