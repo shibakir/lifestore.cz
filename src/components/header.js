@@ -9,13 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import MobileMenu from "@/common/Menu/MobileMenu";
-
-const menuItems = [
-    { name: "Domů", href: "/" },
-    { name: "Pro klienty", href: "/klienti" },
-    { name: "Pro brigádníky", href: "/brigadnici" },
-    { name: "Kontakty", href: "/kontakty" },
-];
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
 
@@ -23,32 +17,87 @@ export default function Header() {
 
     return (
         <header className="bg-background-secondary">
-
             <div className="main flex row pt-4 pb-4">
-                <div className="hidden 2xl:flex w-1/3 justify-start items-center">
+                <div className="hidden 2xl:flex w-5/12 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
-                        {menuItems.map((item) => {
-                            return (
+                        <NavLink
+                            key={1}
+                            href={"/"}
+                            active={pathname === "/"}
+                        >
+                            Domů
+                        </NavLink>
+                        <NavLink
+                            key={2}
+                            href={"/klienti"}
+                            active={pathname === "/klienti"}
+                        >
+                            Pro klienty
+                        </NavLink>
+                        <NavLink
+                            key={3}
+                            href={"/brigadnici"}
+                            active={pathname === "/brigadnici"}
+                        >
+                            Pro brigádníky
+                        </NavLink>
+                        <DropdownMenu key={4} asChild>
+                            <DropdownMenuTrigger>
                                 <NavLink
-                                    key={item.href}
-                                    href={item.href}
-                                    active={pathname === item.href}
+                                    key={50}
+                                    href={""}
+                                    active={pathname.startsWith("/galerie")}
                                 >
-                                    {item.name}
+                                    Galerie
                                 </NavLink>
-                            );
-                        })}
+
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent
+                                sideOffset={5}
+                                align="start"
+                                onCloseAutoFocus={(e) => e.preventDefault()}
+                                className="shadow-none flex flex-col space-y-2"
+                            >
+                                <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
+                                    <NavLink
+                                        key={51}
+                                        href="/galerie#tym"
+                                        active={pathname === "/galerie#tym"}
+                                        className="!text-lg"
+                                    >
+                                        Náš tým v akci
+                                    </NavLink>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
+                                    <NavLink
+                                        key={52}
+                                        href="/galerie#kostymy"
+                                        active={pathname === "/galerie#kostymy"}
+                                        className="!text-lg"
+                                    >
+                                        Naše kostýmy
+                                    </NavLink>
+                                </DropdownMenuItem>
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                        <NavLink
+                            key={5}
+                            href={"/kontakty"}
+                            active={pathname === "/kontakty"}
+                        >
+                            Kontakty
+                        </NavLink>
                     </nav>
                 </div>
-                <div className="2xl:hidden flex w-1/3">
-                    <MobileMenu pathname={pathname} menuItems={menuItems}/>
+                <div className="w-5/12 2xl:hidden flex">
+                    <MobileMenu pathname={pathname}/>
                 </div>
-                <div className="w-1/3 flex justify-center items-center">
+                <div className="w-2/12 flex justify-center items-center">
                     <Link href="/">
                         <Image src="/logo.svg" alt="Logo" width={48} height={48}/>
                     </Link>
                 </div>
-                <div className="w-1/3 space-x-5 flex items-center justify-end">
+                <div className="w-5/12 space-x-5 flex items-center justify-end">
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faInstagram} className="text-xl"/>
                     </a>
