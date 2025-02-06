@@ -1,15 +1,10 @@
-import Image from "next/image";
-
-export default function Logo({src, alt}) {
-
+export default function Logo({ src, alt }) {
     return (
-        <div className="flex justify-center w-full lg:w-11/12 ">
-            <Image
-                src={src}
-                alt={alt}
-                width={280}
-                height={100}
-            />
-        </div>
+        <div
+            className="w-full lg:w-11/12 h-32 bg-center bg-no-repeat bg-contain"
+            style={{ backgroundImage: `url(${src})` }}
+            role="img"
+            aria-label={alt}
+        />
     );
 }

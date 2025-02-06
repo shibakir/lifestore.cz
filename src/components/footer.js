@@ -146,9 +146,16 @@ export default function Footer({ pathname }) {
                             </div>
                             <div className="hidden lg:flex lg:flex-nowrap md:items-start lg:items-center 2xl:items-end">
                                 <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
-                                    <Link href="/">
-                                        <Image src="/logo.svg" alt="Logo" width={100} height={100}/>
-                                    </Link>
+                                    {(variant === "clients-dark") &&
+                                        <Link href="/">
+                                            <Image src="website/lifestore-logo-white.svg" alt="Logo" width={150} height={150}/>
+                                        </Link>
+                                    }
+                                    {(variant === "clients-light" || variant === "workers") &&
+                                        <Link href="/">
+                                            <Image src="website/lifestore-logo-green.svg" alt="Logo" width={150} height={150}/>
+                                        </Link>
+                                    }
                                     <Text
                                         className={`${textColorPrimary} tracking-tight text-[10px] lg:text-sm`}
                                         text={
@@ -179,11 +186,18 @@ export default function Footer({ pathname }) {
                     </div>
                     <div className="flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
                         <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
-                            <Link href="/">
-                                <Image className="text-black" src="/logo.svg" alt="Logo" width={100} height={100}/>
-                            </Link>
+                            {(variant === "workers" || variant === "clients-dark") &&
+                                <Link href="/">
+                                    <Image src="website/lifestore-logo-white.svg" alt="Logo" width={90} height={45}/>
+                                </Link>
+                            }
+                            {(variant === "clients-light") &&
+                                <Link href="/">
+                                    <Image src="website/lifestore-logo-green.svg" alt="Logo" width={90} height={45}/>
+                                </Link>
+                            }
                             <Text
-                                className={`${textColorPrimary} tracking-tight text-[10px] lg:text-sm`}
+                                className={`${textColorPrimary} text-[9px] lg:text-sm`}
                                 text={
                                     "LifeStore s.r.o. | IČO: 24123820\n"
                                     + "Jana Přibíka 953/15, 190 00 Praha\n"

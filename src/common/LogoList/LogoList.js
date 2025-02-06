@@ -3,10 +3,10 @@ import Logo from "@/common/LogoList/Logo";
 export default function LogoList() {
 
     const items = [
-        { id:1, src: "/next.svg", alt: "Hilton logo" },
-        { id:2, src: "/next.svg", alt: "Ferrero Rocher logo" },
-        { id:3, src: "/next.svg", alt: "Billa logo" },
-        { id:4, src: "/next.svg", alt: "Fine Catering logo" },
+        { id:1, src: "/logo/hilton.svg", alt: "Hilton logo" },
+        { id:2, src: "/logo/ferrero.svg", alt: "Ferrero Rocher logo" },
+        { id:3, src: "/logo/billa.svg", alt: "Billa logo" },
+        { id:4, src: "/logo/stones.svg", alt: "Fine Catering logo" },
     ];
 
     return (

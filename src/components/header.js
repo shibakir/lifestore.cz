@@ -94,7 +94,13 @@ export default function Header() {
                 </div>
                 <div className="w-2/12 flex justify-center items-center">
                     <Link href="/">
-                        <Image src="/logo.svg" alt="Logo" width={48} height={48}/>
+                        <Image
+                            src="website/lifestore-favicon.svg"
+                            alt="Logo"
+                            width={48}
+                            height={48}
+                           className="w-9 h-9 lg:w-10 lg:h-10"
+                        />
                     </Link>
                 </div>
                 <div className="w-5/12 space-x-5 flex items-center justify-end">

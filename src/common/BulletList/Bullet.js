@@ -2,8 +2,8 @@ import Image from "next/image";
 import clsx from "clsx";
 
 const variants = {
-    default: { imageSrc: "/file.svg", styleTitle: "text-text-secondary", styleText: "text-text-secondary" },
-    homepage: { imageSrc: "/logo.svg", styleTitle: "text-text-primary", styleText: "text-text-primary" },
+    default: { imageSrc: "/bullet/bullet-dark.svg", styleTitle: "text-text-secondary", styleText: "text-text-secondary" },
+    homepage: { imageSrc: "/bullet/bullet-light.svg", styleTitle: "text-text-primary", styleText: "text-text-primary" },
 };
 
 export default function Bullet({ title, text, variant = "default" }) {
@@ -12,12 +12,12 @@ export default function Bullet({ title, text, variant = "default" }) {
     return (
         <div className="flex flex-row items-start gap-2 sm:gap-3 w-full">
             <Image
-                className="bg-white"
                 src={imageSrc}
                 alt="bullet"
                 width={24}
                 height={24}
                 unoptimized
+                className="w-4 h-4 lg:w-5 lg:h-5"
             />
             <div className="space-y-1 sm:space-y-2">
                 <h3
