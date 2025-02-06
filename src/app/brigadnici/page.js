@@ -2,6 +2,11 @@ import HeroSection from "@/common/Sections/HeroSection";
 import TitleBulletSectionWithImage from "@/common/Sections/TitleBulletSectionWithImage";
 import ActionSection from "@/common/ActionSection/ActionSection";
 
+export const metadata = {
+    title: "Brigádníky",
+    description: "Připojte se k Lifestore a prožijte brigádu jinak!",
+};
+
 export default function Work() {
 
     const firstImageSrc = "/homepage-small.png"

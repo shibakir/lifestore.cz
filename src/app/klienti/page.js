@@ -2,6 +2,11 @@ import HeroSection from "@/common/Sections/HeroSection";
 import TitleBulletSectionWithImage from "@/common/Sections/TitleBulletSectionWithImage";
 import ActionSection from "@/common/ActionSection/ActionSection";
 
+export const metadata = {
+    title: "Klienti",
+    description: "Najděte spolehlivé brigádníky – když je každá minuta důležitá",
+};
+
 export default function Client() {
 
     const firstImageSrc = "/homepage-small.png"

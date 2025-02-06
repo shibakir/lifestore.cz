@@ -4,6 +4,11 @@ import DoubleImageSection from "@/common/Sections/DoubleImageSection";
 import TextSectionWithButton from "@/common/Sections/TextSectionWithButton";
 import HeroSectionHomepage from "@/common/Sections/HeroSectionHomepage";
 
+export const metadata = {
+    title: "Lifestore s.r.o",
+    description: "Lifestore s.r.o.Pomáháme vaší společnosti vyniknout mezi konkurencí.Spolehlivost a kvalita je naším standardem!",
+};
+
 export default function Homepage() {
   return (
       <>

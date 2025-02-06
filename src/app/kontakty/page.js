@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Title from "@/common/Title";
 
+export const metadata = {
+    title: "Kontakty",
+    description: "Náš tým",
+};
+
 function Name({ title }) {
     return (
         <div className="flex flex-row items-center justify-between">
