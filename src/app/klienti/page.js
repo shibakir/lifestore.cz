@@ -43,6 +43,7 @@ export default function Client() {
                         "rozvoj vašeho podnikání."}
                     buttonText={"Poptat brigádníky"}
                     link={""}
+                    variant={"clients"}
                 />
             </div>
             <div className="main">

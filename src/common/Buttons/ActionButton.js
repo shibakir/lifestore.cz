@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const variants = {
     light: {
-        primaryColor: "bg-color-1",
-        secondaryColor: "bg-color-1",
+        primaryColor: "bg-button-button-2",
+        secondaryColor: "bg-button-button-5",
         primaryTextColor: "text-text-secondary",
         secondaryTextColor: "text-text-primary",
     },
@@ -22,7 +22,7 @@ export default function ActionButton({ text, link, variant }) {
 
     return (
         <ShadCNButton
-            className={`group relative transition transform ${primaryColor} duration-200 ease-in-out p-6 overflow-hidden`}
+            className={`min-w-fit group relative transition transform ${primaryColor} duration-200 ease-in-out p-6 overflow-hidden`}
             style={{ borderRadius: "9999px", position: "relative" }}
         >
             <span className={`absolute inset-0 ${secondaryColor} w-0 transition-all duration-300 ease-in-out group-hover:w-full`}/>

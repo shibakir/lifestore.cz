@@ -1,27 +1,41 @@
 import Title from "@/common/Title";
-import HeroButton from "@/common/Buttons/HeroButton";
+import ActionButton from "@/common/Buttons/ActionButton";
 
-export default function HeroSection({title, text, buttonText="", link=""}) {
+const variants = {
+    workers: {
+        mainColor: "bg-background-secondary",
+        textColor: "text-text-secondary",
+    },
+    clients: {
+        mainColor: "bg-background-tertiary",
+        textColor: "text-text-primary",
+    },
+};
+
+export default function HeroSection({title, text, buttonText="", link="", variant }) {
+
+    const { mainColor, textColor } = variants[variant] || variants.workers;
 
     return (
-        <div className="w-full lg:min-h-[594] flex flex-col-reverse lg:flex-row justify-end bg-background-tertiary">
+        <div className={`w-full lg:min-h-[594] flex flex-col-reverse lg:flex-row justify-end ${mainColor}`}>
             <div className="lg:w-1/2 flex flex-row main lg:!main:hidden">
                 <div className="lg:w-1/6"/>
                 <div className="lg:w-5/6 flex flex-col justify-center items-start">
                     <div className="lg:w-3/4 mt-10 mb-10 lg:mt-0 lg:mb-0">
                         <Title
                             title={title}
-                            className="text-text-primary"
+                            className={`${textColor}`}
                         />
-                        <p className="text-xs md:text-md lg:text-lg mt-2 md:mt-5 mb-5 md:mb-10 text-text-primary">
+                        <p className={`text-xs md:text-md lg:text-lg mt-2 md:mt-5 mb-5 md:mb-10 ${textColor}`}>
                             {text}
                         </p>
                         <div>
                             {buttonText &&
-                                <HeroButton
+                                <ActionButton
                                     text={buttonText}
                                     link={link}
-                                    className="bg-background-secondary text-background-tertiary xl:p-7 text-lg"
+                                    className="xl:p-7 text-lg"
+                                    variant={"light"}
                                 />
                             }
                         </div>

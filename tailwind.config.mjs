@@ -33,7 +33,8 @@ module.exports = {
   			},
   			text: {
   				primary: 'var(--color-text-primary)',
-  				secondary: 'var(--color-text-secondary)'
+  				secondary: 'var(--color-text-secondary)',
+				tertiary: 'var(--color-text-tertiary)',
   			},
   			button: {
   				'button-1': 'var(--color-button-1)',

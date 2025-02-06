@@ -33,8 +33,7 @@ export default function Work() {
                         "zprostředkování. Ušetřete administrativní náklady a váš čas, my se o vše postaráme." +
                         "Garantujeme vám rychlost a kvalitu, aby se vaše pozornost mohla plně soustředit na" +
                         "rozvoj vašeho podnikání."}
-                    buttonText={"Poptat brigádníky"}
-                    link={""}
+                    variant={"workers"}
                 />
             </div>
             <div className="main">
@@ -49,8 +48,8 @@ export default function Work() {
                 />
 
                 <ActionSection
-                    title={"Neztrácejte čas – kontaktujte nás dnes a zjistěte, jak můžeme usnadnit vaši cestu k úspěchu!"}
-                    buttonText={"Kontaktujte nás nyní"}
+                    title={"Napište nám hned, ať se můžete dostat rychle k vaší vysněné brigádě. Nečekejte, připojte se k nám už teď!"}
+                    buttonText={"Zaregistrovat se"}
                     link={""}
                     variant={"inverted"}
                 />

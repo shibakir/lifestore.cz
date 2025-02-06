@@ -1,5 +1,6 @@
 import BulletListHomepage from "@/common/BulletList/BulletListHomepage";
 import HomepageHeroButton from "@/common/Buttons/HomepageHeroButton";
+import ActionButton from "@/common/Buttons/ActionButton";
 
 export default function HeroSectionHomepage() {
     return (
@@ -22,7 +23,7 @@ export default function HeroSectionHomepage() {
                             <HomepageHeroButton
                                 text={"Poptat naše služby"}
                                 link={""}
-                                className="bg-background-tertiary xl:p-7"
+                                variant={"dark"}
                             />
                         </div>
                     </div>
