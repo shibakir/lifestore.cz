@@ -2,13 +2,15 @@ import ActionButton from "@/common/Buttons/ActionButton";
 import Title from "@/common/Title";
 
 const variants = {
-    default: { mainColor: "bg-background-secondary",
+    default: {
+        mainColor: "bg-background-secondary",
         secondaryColor: "bg-background-tertiary",
         buttonColor: "bg-background-tertiary",
         textColor: "text-text-secondary",
         buttonTextColor: "text-text-primary"
     },
-    inverted: { mainColor: "bg-background-tertiary",
+    inverted: {
+        mainColor: "bg-background-tertiary",
         secondaryColor: "bg-background-quaternary",
         buttonColor: "bg-background-quaternary",
         textColor: "text-text-primary",

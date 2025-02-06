@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 const variants = {
     default: { imageSrc: "/file.svg", styleTitle: "text-text-secondary", styleText: "text-text-secondary" },
-    homepage: { imageSrc: "/globe.svg", styleTitle: "text-text-primary", styleText: "text-text-primary" },
+    homepage: { imageSrc: "/logo.svg", styleTitle: "text-text-primary", styleText: "text-text-primary" },
 };
 
 export default function Bullet({ title, text, variant = "default" }) {

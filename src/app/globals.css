@@ -40,16 +40,11 @@ xl 1280
 }
 
 .main {
-  width: 92%;
+  width: 83.3333%;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media (min-width: 768px) {
-  .main {
-    width: 83.3333%;
-  }
-}
 
 .actionSection {
   width: 100%;

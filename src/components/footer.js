@@ -1,74 +1,156 @@
-import Button from "@/common/Buttons/Button";
-
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
-import {FooterForm} from "@/common/FooterForm";
-import Image from "next/image";
-import Link from "next/link";
+import {FooterFormClients} from "@/common/Forms/FooterFormClients";
+import Button from "@/common/Buttons/Button";
 import Title from "@/common/Title";
 import Text from "@/common/Text";
+import Image from "next/image";
+import Link from "next/link";
+import {FooterFormWorkers} from "@/common/Forms/FooterFormWorkers";
 
-export default function Footer({pathname}) {
+const variants = {
+    "clients-light": {
+        mainColor: "bg-background-secondary",
+        buttonColorFirstGroup: "bg-button-button-1",
+        buttonColorSecondGroup: "bg-button-button-4",
 
+        buttonTextColorFirstGroup: "text-text-primary",
+        buttonTextColorSecondGroup: "text-text-secondary",
 
+        textColorPrimary: "text-text-secondary",
+        textColorSecondary: "text-text-primary",
+
+        buttonTextColor: "text-text-primary"
+    },
+    "clients-dark": {
+        mainColor: "bg-background-tertiary",
+        buttonColorFirstGroup: "bg-button-button-2",
+        buttonColorSecondGroup: "bg-button-button-3",
+
+        buttonTextColorFirstGroup: "text-text-secondary",
+        buttonTextColorSecondGroup: "text-text-primary",
+
+        textColorPrimary: "text-text-primary",
+        textColorSecondary: "text-text-secondary",
+
+        buttonTextColor: "text-text-primary"
+    },
+    "workers": {
+        mainColor: "bg-background-secondary",
+        buttonColorFirstGroup: "bg-button-button-4",
+        buttonColorSecondGroup: "bg-button-button-1",
+
+        buttonTextColorFirstGroup: "text-text-secondary",
+        buttonTextColorSecondGroup: "text-text-primary",
+
+        textColorSecondary: "text-text-primary",
+        textColorPrimary: "text-text-secondary",
+
+        buttonTextColor: "text-text-primary"
+    },
+};
+
+export default function Footer({ pathname }) {
+
+    let variant;
+
+    switch (true) {
+        case pathname.startsWith("/kontakty") || pathname.startsWith("/klienti"):
+            variant = "clients-dark";
+            break;
+        case pathname.startsWith("/galerie"):
+            variant = "clients-light";
+            console.log("galerie")
+            break;
+        case pathname.startsWith("/brigadnici"):
+            variant = "workers";
+            break;
+        default:
+            variant = "clients-dark";
+    }
+
+    const {
+        mainColor,  // background
+        buttonColorFirstGroup, // odd line buttons
+        buttonColorSecondGroup, // even line buttons
+        buttonTextColorFirstGroup, // odd line buttons text
+        buttonTextColorSecondGroup, // even line buttons text
+        textColorPrimary, // title and text and info
+    } = variants[variant];
 
     return (
         <footer
             className={`${pathname === "/klienti" ? "bg-background-secondary" : ""}`}
         >
-            <div className="pt-10 lg:pt-20 pb-10 lg:pb-20 rounded-tl-[5vw] rounded-tr-[5vw] bg-background-tertiary">
-                <div className="main flex flex-col-reverse lg:flex-row">
+            <div
+                className={`pt-10 lg:pt-20 pb-10 lg:pb-20 rounded-tl-[10vw] rounded-tr-[10vw] ${mainColor}`}
+            >
+                <div className="main flex flex-col lg:flex-row">
                     <div className="w-full xl:w-1/3">
                         <div className="min-h-full grid grid-cols-1 lg:grid-rows-3 gap-4">
                             <div className="w-full lg:w-3/4">
                                 <Title
-                                    className="xl:min-w-[700px] mb-3 text-text-primary hidden lg:block"
+                                    className={`${textColorPrimary} xl:min-w-[700px] mb-3 text-xl font-normal leading-tight`}
                                     title={"Začněte plánovat svou akci s námi!"}
                                 />
                                 <Text
-                                    className="xl:min-w-500px] text-text-primary"
+                                    className={`${textColorPrimary} font-normal xl:min-w-500px]`}
                                     text={"Neváhejte nás kontaktovat! Pomůžeme vám s plánováním a" +
-                                    " zajištěním profesionálního týmu pro vaši akci. Vyplněním" +
-                                    " formuláře se dostanete o krok blíže k úspěchu."}
+                                        " zajištěním profesionálního týmu pro vaši akci. Vyplněním" +
+                                        " formuláře se dostanete o krok blíže k úspěchu."}
                                 />
                             </div>
                             <div>
-                                <div className="space-y-2">
-                                    <div className="space-y-2">
+                                <div className="space-y-2 xl:space-y-5">
+                                    <div className="space-y-2 xl:space-y-5">
                                         <Button
                                             text="+420 773 530 000"
                                             link="tel:+420773530000"
-                                            className="mr-5 bg-button-button-2 hover:bg-button-button-3 text-text-secondary text-base xl:text-lg p-6"
+                                            className={`mr-2 xl:mr-5 ${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
                                         />
                                         <Button
                                             text="marika.pusova@lifestore.cz"
                                             link="mailto:marika.pusova@lifestore.cz"
-                                            className="bg-button-button-2 hover:bg-button-button-3 text-text-secondary text-base xl:text-lg p-6"
+                                            className={`${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
                                         />
                                     </div>
                                     <div>
                                         <Button
                                             text="lifestore.cz"
                                             link="https://www.lifestore.cz/"
-                                            className="mr-5 mb-2 bg-button-button-3 hover:bg-button-button-3 text-text-primary text-base xl:text-lg p-6"
+                                            className={`mr-2 xl:mr-5 ${buttonColorSecondGroup} ${buttonTextColorSecondGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
                                             icon={faInstagram}
                                         />
                                         <Button
                                             text="Lifestore"
                                             link="https://www.lifestore.cz/"
-                                            className="bg-button-button-3 hover:bg-button-button-3 text-text-primary text-base xl:text-lg p-6"
+                                            className={`${buttonColorSecondGroup} ${buttonTextColorSecondGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
                                             icon={faFacebookF}
                                         />
                                     </div>
+                                    {(variant === "workers" || !variant) &&
+                                        <div>
+                                            <Button
+                                                text="Podepsat smlouvu"
+                                                link=""
+                                                className={`mr-2 xl:mr-5 ${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 mb-2 font-normal text-sm xl:text-lg p-6`}
+                                            />
+                                            <Button
+                                                text="Interní dokumenty"
+                                                link=""
+                                                className={`${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 text-sm font-normal xl:text-lg p-6`}
+                                            />
+                                        </div>
+                                    }
                                 </div>
                             </div>
-                            <div className="flex flex-nowrap md:items-start lg:items-center 2xl:items-end">
+                            <div className="hidden lg:flex lg:flex-nowrap md:items-start lg:items-center 2xl:items-end">
                                 <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
                                     <Link href="/">
-                                        <Image src="/globe.svg" alt="Logo" width={100} height={100}/>
+                                        <Image src="/logo.svg" alt="Logo" width={100} height={100}/>
                                     </Link>
                                     <Text
-                                        className="text-text-primary tracking-tight text-[10px] lg:text-sm"
+                                        className={`${textColorPrimary} tracking-tight text-[10px] lg:text-sm`}
                                         text={
                                             "LifeStore s.r.o.\n"
                                             + "IČO: 24123820\n"
@@ -80,9 +162,35 @@ export default function Footer({pathname}) {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden lg:block lg:w-1/3"></div>
-                    <div className="mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col items-center">
-                        <FooterForm/>
+                    <div className="hidden lg:block lg:w-1/3"/>
+                    <div className="mt-5 mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col lg:items-center">
+                        {
+                            (variant === "workers") &&
+                            <FooterFormWorkers variant={"light"}/>
+                        }
+                        {
+                            (variant === "clients-light") &&
+                            <FooterFormClients variant={"light"}/>
+                        }
+                        {
+                            (variant === "clients-dark") &&
+                            <FooterFormClients variant={"dark"}/>
+                        }
+                    </div>
+                    <div className="flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
+                        <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
+                            <Link href="/">
+                                <Image className="text-black" src="/logo.svg" alt="Logo" width={100} height={100}/>
+                            </Link>
+                            <Text
+                                className={`${textColorPrimary} tracking-tight text-[10px] lg:text-sm`}
+                                text={
+                                    "LifeStore s.r.o. | IČO: 24123820\n"
+                                    + "Jana Přibíka 953/15, 190 00 Praha\n"
+                                    + "Všechna práva vyhrazena © 2025"
+                                }
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

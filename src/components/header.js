@@ -45,7 +45,7 @@ export default function Header() {
                 </div>
                 <div className="w-1/3 flex justify-center items-center">
                     <Link href="/">
-                        <Image src="/globe.svg" alt="Logo" width={48} height={48}/>
+                        <Image src="/logo.svg" alt="Logo" width={48} height={48}/>
                     </Link>
                 </div>
                 <div className="w-1/3 space-x-5 flex items-center justify-end">
