@@ -1,19 +1,34 @@
 import { Button as ShadCNButton } from '@/components/ui/button';
 import Link from 'next/link';
-import clsx from 'clsx';
 
-export default function ActionButton({ text, link, className=""}) {
+const variants = {
+    light: {
+        primaryColor: "bg-color-1",
+        secondaryColor: "bg-color-1",
+        primaryTextColor: "text-text-secondary",
+        secondaryTextColor: "text-text-primary",
+    },
+    dark: {
+        primaryColor: "bg-button-button-1",
+        secondaryColor: "bg-button-button-2",
+        primaryTextColor: "text-text-primary",
+        secondaryTextColor: "text-text-secondary",
+    }
+};
+
+export default function ActionButton({ text, link, variant }) {
+
+    const { primaryColor, secondaryColor, primaryTextColor, secondaryTextColor } = variants[variant] || variants.dark;
+
     return (
         <ShadCNButton
-            className={clsx(
-                "group transition transform duration-200 ease-in-out hover:scale-105 p-6",
-                className
-            )}
-            style={{ borderRadius: "9999px" }}
+            className={`group relative transition transform ${primaryColor} duration-200 ease-in-out p-6 overflow-hidden`}
+            style={{ borderRadius: "9999px", position: "relative" }}
         >
+            <span className={`absolute inset-0 ${secondaryColor} w-0 transition-all duration-300 ease-in-out group-hover:w-full`}/>
             <Link
                 href={link}
-                className="inline-flex w-full h-full justify-center items-center font-semibold"
+                className={`inline-flex w-full h-full justify-center ${primaryTextColor} group-hover:${secondaryTextColor} items-center font-semibold relative z-10`}
             >
                 {text}
             </Link>

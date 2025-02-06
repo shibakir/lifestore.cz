@@ -56,7 +56,7 @@ export default function Header() {
                                 sideOffset={5}
                                 align="start"
                                 onCloseAutoFocus={(e) => e.preventDefault()}
-                                className="shadow-none flex flex-col space-y-2"
+                                className="shadow-none flex flex-col space-y-2 bg-background-secondary"
                             >
                                 <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
                                     <NavLink

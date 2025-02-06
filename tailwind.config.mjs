@@ -39,7 +39,8 @@ module.exports = {
   				'button-1': 'var(--color-button-1)',
   				'button-2': 'var(--color-button-2)',
   				'button-3': 'var(--color-button-3)',
-  				'button-4': 'var(--color-button-4)'
+  				'button-4': 'var(--color-button-4)',
+				'button-5': 'var(--color-button-5)',
   			}
   		},
   		borderRadius: {

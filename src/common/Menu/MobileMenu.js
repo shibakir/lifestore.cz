@@ -74,7 +74,7 @@ export default function MobileMenu({pathname}) {
                                 sideOffset={5}
                                 align="center"
                                 onCloseAutoFocus={(e) => e.preventDefault()}
-                                className="shadow-none flex flex-col min-w-[200px] space-y-2"
+                                className="shadow-none flex flex-col min-w-[200px] space-y-2 bg-background-secondary"
                             >
                                 <DropdownMenuItem className="focus:bg-transparent flex justify-center text-center" asChild>
                                     <NavLink

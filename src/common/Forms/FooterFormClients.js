@@ -42,7 +42,6 @@ export function FooterFormClients({variant}) {
         buttonTextColor, // submit button text
     } = variants[variant] || variants.dark;
 
-
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -139,7 +138,8 @@ export function FooterFormClients({variant}) {
                 />
                 <SubmitButton
                     text="Odeslat zprávu"
-                    className={`${buttonColor} ${buttonTextColor} hover:bg-button-button-3 font-bold pl-5 pr-5 mt-auto`}
+                    className={`font-bold pl-5 pr-5 mt-auto`}
+                    variant={"light"}
                 />
             </form>
         </Form>
