@@ -9,13 +9,16 @@ import {
 } from "@/components/ui/dropdown-menu";
 import NavLink from "@/common/Menu/NavLink"
 import { HiMenu } from "react-icons/hi";
+import {useState} from "react";
 
 export default function MobileMenu({pathname, menuItems}) {
 
+    const [open, setOpen] = useState(false);
+
     return (
-        <DropdownMenu>
+        <DropdownMenu open={open} onOpenChange={setOpen}>
             <DropdownMenuTrigger asChild>
-                <button>
+                <button onClick={() => setOpen(!open)}>
                     <HiMenu className="text-black" size={30}/>
                 </button>
             </DropdownMenuTrigger>

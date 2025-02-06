@@ -1,17 +1,34 @@
 import ActionButton from "@/common/Buttons/ActionButton";
 import Title from "@/common/Title";
 
-export default function ActionSection({title, buttonText, link=""}) {
+const variants = {
+    default: { mainColor: "bg-background-secondary",
+        secondaryColor: "bg-background-tertiary",
+        buttonColor: "bg-background-tertiary",
+        textColor: "text-text-secondary",
+        buttonTextColor: "text-text-primary"
+    },
+    inverted: { mainColor: "bg-background-tertiary",
+        secondaryColor: "bg-background-quaternary",
+        buttonColor: "bg-background-quaternary",
+        textColor: "text-text-primary",
+        buttonTextColor: "text-text-secondary"
+    },
+};
+
+export default function ActionSection({title, buttonText, link="", variant}) {
+
+    const { mainColor, secondaryColor, buttonColor, textColor, buttonTextColor } = variants[variant] || variants.default;
 
     return (
         <div className="lg:w-6/8">
-            <div className="actionSection bg-background-tertiary pb-4 rounded-[1vw]">
-                <div className="flex flex-col lg:flex-row bg-background-secondary rounded-[1vw] pt-5 pb-5 lg:p-14 space-y-5">
+            <div className={`actionSection ${secondaryColor} pb-4 rounded-[1vw]`}>
+                <div className={`flex flex-col lg:flex-row ${mainColor} rounded-[1vw] pt-5 pb-5 lg:p-14 space-y-5`}>
                     <div className="actionSectionText flex items-center justify-center ">
                         <div className="w-full lg:w-8/10 flex sm:text-center lg:text-start">
                             <Title
                                 title={title}
-                                className="text-text-secondary font-semibold"
+                                className={`${textColor} font-semibold`}
                             />
                         </div>
                     </div>
@@ -20,7 +37,7 @@ export default function ActionSection({title, buttonText, link=""}) {
                         <ActionButton
                             text={buttonText}
                             link={link}
-                            className="xl:p-7 text-lg bg-background-tertiary"
+                            className={`xl:p-7 text-lg ${buttonColor} ${buttonTextColor}`}
                         />
                     </div>
                 </div>
