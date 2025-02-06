@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
+import TextSectionWithButton from "@/common/Sections/TextSectionWithButton";
 import clsx from "clsx";
 
 export default function DoubleImageSection({ reverse, title, text, buttonText, link="", className=""}) {

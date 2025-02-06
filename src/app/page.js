@@ -1,8 +1,7 @@
-import BulletListHomepage from "@/common/BulletList/BulletListHomepage";
 import Image from "next/image";
 import LogoList from "@/common/LogoList/LogoList";
 import DoubleImageSection from "@/common/Sections/DoubleImageSection";
-import TextSectionWithButton from "@/common/TextSectionWithButton/TextSectionWithButton";
+import TextSectionWithButton from "@/common/Sections/TextSectionWithButton";
 import HeroSectionHomepage from "@/common/Sections/HeroSectionHomepage";
 
 export default function Homepage() {
