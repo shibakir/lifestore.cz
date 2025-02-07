@@ -76,7 +76,7 @@ function ImagesCollageMobile({images, buttonText}) {
 function GallerySection({title, images, buttonText, id}) {
     return (
         <div id={id} className="mb-10">
-            <div className="w-1/2 xl:w-1/3 mb-10 flex flex-row items-center justify-between">
+            <div className="w-full lg:w-1/2 xl:w-1/3 mb-5 lg:mb-10 flex flex-row items-center justify-between">
                 <Title title={title} className="text-text-secondary font-semibold"/>
                 <hr className="flex-grow ml-5 lg:ml-8 h-0.5 sm:h-1 bg-background-quaternary border-none"/>
             </div>
