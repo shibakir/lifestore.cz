@@ -22,14 +22,20 @@ const variants = {
     light: {
         mainColor: "bg-button-button-4",
         textColorPrimary: "text-text-secondary",
-        buttonColor: "bg-button-button-1",
         buttonTextColor: "text-text-primary",
+        submitButtonStyle: "dark",
+    },
+    "gallery-light": {
+        mainColor: "bg-button-button-4",
+        textColorPrimary: "text-text-secondary",
+        buttonTextColor: "text-text-primary",
+        submitButtonStyle: "dark",
     },
     dark: {
         mainColor: "bg-button-button-3",
         textColorPrimary: "text-text-primary",
-        buttonColor: "bg-button-button-2",
         buttonTextColor: "text-text-secondary",
+        submitButtonStyle: "light",
     },
 };
 
@@ -38,8 +44,8 @@ export function FooterFormClients({variant}) {
     const {
         mainColor, // fields
         textColorPrimary, // labels
-        buttonColor, // submit button
         buttonTextColor, // submit button text
+        submitButtonStyle, // submit button color
     } = variants[variant] || variants.dark;
 
     const form = useForm({
@@ -63,7 +69,7 @@ export function FooterFormClients({variant}) {
             />
             <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="w-full h-full space-y-5 lg:space-y-10"
+                className="w-full h-full space-y-5"
             >
 
                 <FormField
@@ -129,7 +135,7 @@ export function FooterFormClients({variant}) {
                             <FormControl>
                             <textarea {...field}
                                       className={`${mainColor} border-0 w-full p-2 resize-none rounded-md`}
-                                      style={{minHeight: "120px"}}
+                                      style={{minHeight: "220px"}}
                             />
                             </FormControl>
                             <FormMessage/>
@@ -139,7 +145,7 @@ export function FooterFormClients({variant}) {
                 <SubmitButton
                     text="Odeslat zprávu"
                     className={`font-bold pl-5 pr-5 mt-auto`}
-                    variant={"light"}
+                    variant={submitButtonStyle}
                 />
             </form>
         </Form>

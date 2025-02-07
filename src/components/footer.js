@@ -60,7 +60,6 @@ export default function Footer({ pathname }) {
             break;
         case pathname.startsWith("/galerie"):
             variant = "clients-light";
-            console.log("galerie")
             break;
         case pathname.startsWith("/brigadnici"):
             variant = "workers";
@@ -101,48 +100,128 @@ export default function Footer({ pathname }) {
                                 />
                             </div>
                             <div>
-                                <div className="space-y-2 xl:space-y-5">
+                                { // Gallery
+                                    variant === "clients-light" &&
                                     <div className="space-y-2 xl:space-y-5">
-                                        <Button
-                                            text="+420 773 530 000"
-                                            link="tel:+420773530000"
-                                            className={`mr-2 xl:mr-5 ${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
-                                        />
-                                        <Button
-                                            text="marika.pusova@lifestore.cz"
-                                            link="mailto:marika.pusova@lifestore.cz"
-                                            className={`${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
-                                        />
+                                        <div className="space-y-2 xl:space-y-5">
+                                            <Button
+                                                text="+420 773 530 000"
+                                                link="tel:+420773530000"
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                variant={"dark"}
+                                            />
+                                            <Button
+                                                text="marika.pusova@lifestore.cz"
+                                                link="mailto:marika.pusova@lifestore.cz"
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                variant={"dark"}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Button
+                                                text="lifestore.cz"
+                                                link="https://www.lifestore.cz/"
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                icon={faInstagram}
+                                                variant={"light"}
+                                            />
+                                            <Button
+                                                text="Lifestore"
+                                                link="https://www.lifestore.cz/"
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                icon={faFacebookF}
+                                                variant={"light"}
+                                            />
+                                        </div>
                                     </div>
-                                    <div>
-                                        <Button
-                                            text="lifestore.cz"
-                                            link="https://www.lifestore.cz/"
-                                            className={`mr-2 xl:mr-5 ${buttonColorSecondGroup} ${buttonTextColorSecondGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
-                                            icon={faInstagram}
-                                        />
-                                        <Button
-                                            text="Lifestore"
-                                            link="https://www.lifestore.cz/"
-                                            className={`${buttonColorSecondGroup} ${buttonTextColorSecondGroup} hover:bg-button-button-3 font-normal text-sm xl:text-lg p-6`}
-                                            icon={faFacebookF}
-                                        />
+                                }
+
+
+                                { // Homepage or Clients page or Contacts
+                                    variant === "clients-dark" &&
+                                    <div className="space-y-2 xl:space-y-5">
+                                        <div className="space-y-2 xl:space-y-5">
+                                            <Button
+                                                text="+420 773 530 000"
+                                                link="tel:+420773530000"
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                variant={"light-green"}
+                                            />
+                                            <Button
+                                                text="marika.pusova@lifestore.cz"
+                                                link="mailto:marika.pusova@lifestore.cz"
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                variant={"light-green"}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Button
+                                                text="lifestore.cz"
+                                                link="https://www.lifestore.cz/"
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                icon={faInstagram}
+                                                variant={"mild-green"}
+                                            />
+                                            <Button
+                                                text="Lifestore"
+                                                link="https://www.lifestore.cz/"
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                icon={faFacebookF}
+                                                variant={"mild-green"}
+                                            />
+                                        </div>
                                     </div>
-                                    {(variant === "workers" || !variant) &&
+                                }
+
+                                { // Workers
+                                    variant === "workers" &&
+                                    <div className="space-y-2 xl:space-y-5">
+                                        <div className="space-y-2 xl:space-y-5">
+                                            <Button
+                                                text="+420 773 530 000"
+                                                link="tel:+420773530000"
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                variant={"light"}
+                                            />
+                                            <Button
+                                                text="marika.pusova@lifestore.cz"
+                                                link="mailto:marika.pusova@lifestore.cz"
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                variant={"light"}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Button
+                                                text="lifestore.cz"
+                                                link="https://www.lifestore.cz/"
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                icon={faInstagram}
+                                                variant={"mild-green"}
+                                            />
+                                            <Button
+                                                text="Lifestore"
+                                                link="https://www.lifestore.cz/"
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                icon={faFacebookF}
+                                                variant={"mild-green"}
+                                            />
+                                        </div>
                                         <div>
                                             <Button
                                                 text="Podepsat smlouvu"
                                                 link=""
-                                                className={`mr-2 xl:mr-5 ${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 mb-2 font-normal text-sm xl:text-lg p-6`}
+                                                className={`mr-2 xl:mr-5 mb-2 font-normal text-sm xl:text-lg p-6`}
+                                                variant={"light"}
                                             />
                                             <Button
                                                 text="Interní dokumenty"
                                                 link=""
-                                                className={`${buttonColorFirstGroup} ${buttonTextColorFirstGroup} hover:bg-button-button-3 text-sm font-normal xl:text-lg p-6`}
+                                                className={`text-sm font-normal xl:text-lg p-6`}
+                                                variant={"light"}
                                             />
                                         </div>
-                                    }
-                                </div>
+                                    </div>
+                                }
                             </div>
                             <div className="hidden lg:flex lg:flex-nowrap md:items-start lg:items-center 2xl:items-end">
                                 <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
@@ -172,32 +251,32 @@ export default function Footer({ pathname }) {
                     <div className="hidden lg:block lg:w-1/3"/>
                     <div className="mt-5 mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col lg:items-center">
                         {
-                            (variant === "workers") &&
+                            (variant === "workers") && // workers
                             <FooterFormWorkers variant={"light"}/>
                         }
                         {
-                            (variant === "clients-light") &&
-                            <FooterFormClients variant={"light"}/>
+                            (variant === "clients-light") && // gallery
+                            <FooterFormClients variant={"gallery-light"}/>
                         }
                         {
-                            (variant === "clients-dark") &&
+                            (variant === "clients-dark") && // homepage or clients or contacts
                             <FooterFormClients variant={"dark"}/>
                         }
                     </div>
                     <div className="flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
-                        <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
+                        <div className="mt-5 lg:mt-0 flex flex-row place-items-center justify-between w-full">
                             {(variant === "workers" || variant === "clients-dark") &&
                                 <Link href="/">
-                                    <Image src="website/lifestore-logo-white.svg" alt="Logo" width={90} height={45}/>
+                                    <Image src="website/lifestore-logo-white.svg" alt="Logo" width={80} height={45}/>
                                 </Link>
                             }
                             {(variant === "clients-light") &&
                                 <Link href="/">
-                                    <Image src="website/lifestore-logo-green.svg" alt="Logo" width={90} height={45}/>
+                                    <Image src="website/lifestore-logo-green.svg" alt="Logo" width={80} height={45}/>
                                 </Link>
                             }
                             <Text
-                                className={`${textColorPrimary} text-[9px] lg:text-sm`}
+                                className={`${textColorPrimary} text-[9px] lg:text-sm leading-tight`}
                                 text={
                                     "LifeStore s.r.o. | IČO: 24123820\n"
                                     + "Jana Přibíka 953/15, 190 00 Praha\n"
