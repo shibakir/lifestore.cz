@@ -2,7 +2,7 @@ import Image from "next/image";
 import Title from "@/common/Title";
 
 export const metadata = {
-    title: "Kontakty",
+    title: "Lifestore s.r.o - Kontakty",
     description: "Náš tým",
 };
 

@@ -16,13 +16,13 @@ const variants = {
     }
 };
 
-export default function ActionButton({ text, link, variant }) {
+export default function ActionButton({ text, link, variant, className="" }) {
 
     const { primaryColor, secondaryColor, primaryTextColor, secondaryTextColor } = variants[variant] || variants.dark;
 
     return (
         <ShadCNButton
-            className={`min-w-fit group relative transition transform ${primaryColor} duration-200 ease-in-out p-6 overflow-hidden`}
+            className={`${className} min-w-fit group relative transition transform ${primaryColor} duration-200 ease-in-out p-6 overflow-hidden`}
             style={{ borderRadius: "9999px", position: "relative" }}
         >
             <span className={`absolute inset-0 ${secondaryColor} w-0 transition-all duration-300 ease-in-out group-hover:w-full`}/>

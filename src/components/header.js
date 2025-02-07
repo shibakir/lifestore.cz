@@ -61,8 +61,8 @@ export default function Header() {
                                 <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
                                     <NavLink
                                         key={51}
-                                        href="/galerie#tym"
-                                        active={pathname === "/galerie#tym"}
+                                        href="/galerie#nas-tym-v-akci"
+                                        active={pathname === "/galerie#nas-tym-v-akci"}
                                         className="!text-lg"
                                     >
                                         Náš tým v akci
@@ -71,8 +71,8 @@ export default function Header() {
                                 <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
                                     <NavLink
                                         key={52}
-                                        href="/galerie#kostymy"
-                                        active={pathname === "/galerie#kostymy"}
+                                        href="/galerie#nase-kostymy"
+                                        active={pathname === "/galerie#nase-kostymy"}
                                         className="!text-lg"
                                     >
                                         Naše kostýmy

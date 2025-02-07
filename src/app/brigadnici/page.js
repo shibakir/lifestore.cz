@@ -3,7 +3,7 @@ import TitleBulletSectionWithImage from "@/common/Sections/TitleBulletSectionWit
 import ActionSection from "@/common/ActionSection/ActionSection";
 
 export const metadata = {
-    title: "Brigádníky",
+    title: "Lifestore s.r.o - Brigádníky",
     description: "Připojte se k Lifestore a prožijte brigádu jinak!",
 };
 

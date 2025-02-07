@@ -79,8 +79,8 @@ export default function MobileMenu({pathname}) {
                                 <DropdownMenuItem className="focus:bg-transparent flex justify-center text-center" asChild>
                                     <NavLink
                                         key={51}
-                                        href="/galerie#tym"
-                                        active={pathname === "/galerie#tym"}
+                                        href="/galerie#nas-tym-v-akci"
+                                        active={pathname === "/galerie#nas-tym-v-akci"}
                                         className="!text-lg"
                                         onClick={handleClose}
                                     >
@@ -90,8 +90,8 @@ export default function MobileMenu({pathname}) {
                                 <DropdownMenuItem className="focus:bg-transparent flex justify-center text-center" asChild>
                                     <NavLink
                                         key={52}
-                                        href="/galerie#kostymy"
-                                        active={pathname === "/galerie#kostymy"}
+                                        href="/galerie#nase-kostymy"
+                                        active={pathname === "/galerie#nase-kostymy"}
                                         className="!text-lg"
                                         onClick={handleClose}
                                     >

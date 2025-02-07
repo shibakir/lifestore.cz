@@ -3,7 +3,7 @@ import TitleBulletSectionWithImage from "@/common/Sections/TitleBulletSectionWit
 import ActionSection from "@/common/ActionSection/ActionSection";
 
 export const metadata = {
-    title: "Klienti",
+    title: "Lifestore s.r.o - Klienti",
     description: "Najděte spolehlivé brigádníky – když je každá minuta důležitá",
 };
 
