@@ -30,7 +30,7 @@ export default function Homepage() {
                     className="mt-5"
                     title={"Poptáváte hostesky? To je naše parketa!"}
                     buttonText={"Kontaktujte nás nyní"}
-                    link={""}
+                    link={"#formular-pro-klienty"}
                     text={"Od roku 2011 jsme zajistili tisíce hostesek a promotérů." +
                         " Náš profesionální tým připravíme na akci dle vašich specifických" +
                         " požadavků – to zahrnuje oblečení, líčení a účes. Předností" +
@@ -53,6 +53,7 @@ export default function Homepage() {
             title="Brigádníci pro restaurace, bary a hotely"
             text="Potřebujete rychle spolehlivý personál? Zajistíme snídaňové hostesky, debaras, obsluhu i recepci – zvládneme to i na poslední chvíli. Vyřešíme výpadky ve vašem týmu, seženeme kvalitní náhradu a ušetříme vám čas se zaškolováním. Zaměřte se na svůj byznys, my zajistíme zbytek."
             buttonText="Zjistit více o našich službách"
+            link={"#formular-pro-klienty"}
         />
         <DoubleImageSection
             reverse
@@ -60,6 +61,7 @@ export default function Homepage() {
             title="Brigáda, která vás bude bavit"
             text="Připojte se k Lifestore a otevřete si dveře do světa prestižních eventů! Nabízíme flexibilní pracovní směny, zaškolení, a na většině akcí poskytujeme i stravování. Staňte se součástí týmu, který realizuje nejvýznamnější akce v České republice a vyjíždí i na mezinárodní eventy. Začněte svou kariéru v event managementu s Lifestore ještě dnes!"
             buttonText="Přidejte se k našemu týmu"
+            link={"brigadnici/#formular-pro-hostesky"}
         />
       </>
   );

@@ -39,7 +39,7 @@ const variants = {
     },
 };
 
-export function FooterFormClients({variant}) {
+export function FooterFormClients({id, variant}) {
 
     const {
         mainColor, // fields
@@ -68,6 +68,7 @@ export function FooterFormClients({variant}) {
                 title={"Kontaktní formulář"}
             />
             <form
+                id={id}
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="w-full h-full space-y-5"
             >

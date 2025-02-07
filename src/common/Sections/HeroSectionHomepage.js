@@ -22,7 +22,7 @@ export default function HeroSectionHomepage() {
                         <div>
                             <HomepageHeroButton
                                 text={"Poptat naše služby"}
-                                link={""}
+                                link={"#formular-pro-klienty"}
                                 variant={"dark"}
                             />
                         </div>

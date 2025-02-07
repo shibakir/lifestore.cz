@@ -42,7 +42,7 @@ export default function Client() {
                         "Garantujeme vám rychlost a kvalitu, aby se vaše pozornost mohla plně soustředit na" +
                         "rozvoj vašeho podnikání."}
                     buttonText={"Poptat brigádníky"}
-                    link={""}
+                    link={"#formular-pro-klienty"}
                     variant={"clients"}
                 />
             </div>
@@ -60,7 +60,7 @@ export default function Client() {
                 <ActionSection
                     title={"Neztrácejte čas – kontaktujte nás dnes a zjistěte, jak můžeme usnadnit vaši cestu k úspěchu!"}
                     buttonText={"Kontaktujte nás nyní"}
-                    link={""}
+                    link={"#formular-pro-klienty"}
                 />
 
                 <TitleBulletSectionWithImage

@@ -50,7 +50,7 @@ export default function Work() {
                 <ActionSection
                     title={"Napište nám hned, ať se můžete dostat rychle k vaší vysněné brigádě. Nečekejte, připojte se k nám už teď!"}
                     buttonText={"Zaregistrovat se"}
-                    link={""}
+                    link={"#formular-pro-hostesky"}
                     variant={"inverted"}
                 />
 

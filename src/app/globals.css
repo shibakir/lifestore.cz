@@ -11,6 +11,10 @@ xl 1280
 3xl 1800
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
     --color-text-primary: #FCFBF9;

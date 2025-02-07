@@ -135,8 +135,6 @@ export default function Footer({ pathname }) {
                                         </div>
                                     </div>
                                 }
-
-
                                 { // Homepage or Clients page or Contacts
                                     variant === "clients-dark" &&
                                     <div className="space-y-2 xl:space-y-5">
@@ -172,7 +170,6 @@ export default function Footer({ pathname }) {
                                         </div>
                                     </div>
                                 }
-
                                 { // Workers
                                     variant === "workers" &&
                                     <div className="space-y-2 xl:space-y-5">
@@ -252,15 +249,15 @@ export default function Footer({ pathname }) {
                     <div className="mt-5 mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col lg:items-center">
                         {
                             (variant === "workers") && // workers
-                            <FooterFormWorkers variant={"light"}/>
+                            <FooterFormWorkers id={"formular-pro-hostesky"} variant={"light"}/>
                         }
                         {
                             (variant === "clients-light") && // gallery
-                            <FooterFormClients variant={"gallery-light"}/>
+                            <FooterFormClients id={"formular-pro-klienty"} variant={"gallery-light"}/>
                         }
                         {
                             (variant === "clients-dark") && // homepage or clients or contacts
-                            <FooterFormClients variant={"dark"}/>
+                            <FooterFormClients id={"formular-pro-klienty"} variant={"dark"}/>
                         }
                     </div>
                     <div className="flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
