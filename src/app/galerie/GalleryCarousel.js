@@ -2,18 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import {Button as ShadCNButton} from "@/components/ui/button";
 
-export default function GalleryCarousel() {
-    const images = [
-        { id: 0, image: "/gallery/test1.jpeg" },
-        { id: 10, image: "/gallery/test2.jpeg" },
-        { id: 1, image: "/gallery/first-collage/w-image.png" },
-        { id: 2, image: "/gallery/first-collage/h-image.png" },
-        { id: 3, image: "/gallery/first-collage/h-image.png" },
-        { id: 4, image: "/gallery/first-collage/h-image.png" },
-        { id: 5, image: "/gallery/first-collage/h-image.png" },
-        { id: 6, image: "/gallery/first-collage/w-image.png" },
-    ];
+export default function GalleryCarousel({images, buttonText}) {
 
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,9 +35,20 @@ export default function GalleryCarousel() {
 
     return (
         <div className="relative">
-            <button onClick={() => setIsOpen(true)} className="px-4 py-2 bg-blue-500 text-white rounded-md">
-
-            </button>
+            <div className="flex justify-end mt-4 pr-5">
+                <ShadCNButton
+                    onClick={() => setIsOpen(true)}
+                    className={`min-w-fit group relative transition transform bg-button-button-1 duration-200 ease-in-out p-3 lg:p-6 overflow-hidden`}
+                    style={{ borderRadius: "9999px", position: "relative" }}
+                >
+                    <span className={`absolute inset-0 bg-button-button-2 w-0 transition-all duration-300 ease-in-out group-hover:w-full`}/>
+                    <span
+                        className={`inline-flex w-full h-full justify-center text-text-primary group-hover:text-text-secondary items-center font-semibold relative z-10`}
+                    >
+                    {buttonText}
+                </span>
+                </ShadCNButton>
+            </div>
 
             {isOpen && (
                 <div

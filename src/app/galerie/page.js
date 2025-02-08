@@ -32,7 +32,7 @@ function ImagesCollageDesktop({ images, buttonText }) {
                 ))}
             </div>
             <div className="flex justify-end mt-4 pr-5">
-                <ActionButton text={buttonText} link={""} variant={"dark"} />
+                <GalleryCarousel images={images} buttonText={buttonText}/>
             </div>
         </div>
     );
@@ -63,12 +63,7 @@ function ImagesCollageMobile({images, buttonText}) {
                 ))}
             </div>
             <div className="flex justify-center mt-4">
-                <ActionButton
-                    text={buttonText}
-                    link={""}
-                    variant={"dark"}
-                    className={"!text-xs !p-3"}
-                />
+                <GalleryCarousel images={images} buttonText={buttonText}/>
             </div>
         </div>
 )
@@ -93,7 +88,16 @@ function GallerySection({title, images, buttonText, id}) {
 }
 
 export default function Gallery() {
-    const images = [
+    const imagesWorkers = [
+        {id: 1, image: "/gallery/first-collage/w-image.png"},
+        {id: 2, image: "/gallery/first-collage/h-image.png"},
+        {id: 3, image: "/gallery/first-collage/h-image.png"},
+        {id: 4, image: "/gallery/first-collage/h-image.png"},
+        {id: 5, image: "/gallery/first-collage/h-image.png"},
+        {id: 6, image: "/gallery/first-collage/w-image.png"},
+    ];
+
+    const imagesDress = [
         {id: 1, image: "/gallery/first-collage/w-image.png"},
         {id: 2, image: "/gallery/first-collage/h-image.png"},
         {id: 3, image: "/gallery/first-collage/h-image.png"},
@@ -108,16 +112,14 @@ export default function Gallery() {
                 <GallerySection
                     id={"nas-tym-v-akci"}
                     title={"Náš tým v akci"}
-                    images={images}
+                    images={imagesWorkers}
                     buttonText={"Načíst další fotografie"}
                 />
-
-                <GalleryCarousel images={images}/>
 
                 <GallerySection
                     id={"nase-kostymy"}
                     title={"Naše kostýmy"}
-                    images={images}
+                    images={imagesDress}
                     buttonText={"Načíst další kostýmy"}
                 />
             </div>
