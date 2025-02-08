@@ -16,7 +16,7 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-background-secondary">
+        <header className="bg-background-secondary fixed top-0 left-0 w-full z-50 shadow-md">
             <div className="main flex row pt-4 pb-4">
                 <div className="hidden 2xl:flex w-5/12 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
