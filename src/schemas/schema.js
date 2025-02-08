@@ -7,4 +7,5 @@ export const formSchema = z.object({
     phone: z.string().min(1, "Toto pole je povinné"),
     email: z.string().min(1, "Toto pole je povinné"),
     note: z.string().optional(),
+    images: z.any(),
 })

@@ -17,27 +17,37 @@ const variants = {
     }
 };
 
-export default function SubmitButton({ text, className, variant }) {
-
-    const { primaryColor, secondaryColor, primaryTextColor, secondaryTextColor } = variants[variant] || variants.dark;
+export default function SubmitButton({ text, isSubmitted, className, variant }) {
+    const {
+        primaryColor,
+        secondaryColor,
+        primaryTextColor,
+        secondaryTextColor
+    } = variants[variant] || variants.dark;
 
     return (
         <ShadCNButton
             type="submit"
-            style={{borderRadius: "9999px", position: "relative"}}
+            disabled={isSubmitted}
+            style={{ borderRadius: "9999px", position: "relative" }}
             className={clsx(
-                `group relative transition transform ${primaryColor} duration-200 ease-in-out p-6 overflow-hidden`,
+                `group relative transition transform duration-200 ease-in-out p-6 overflow-hidden`,
+                isSubmitted ? "bg-yellow-500 text-black" : primaryColor,
                 className
             )}
         >
+            {!isSubmitted && (
+                <span className={`absolute inset-0 ${secondaryColor} w-0 transition-all duration-300 ease-in-out group-hover:w-full`} />
+            )}
             <span
-                className={`absolute inset-0 ${secondaryColor} w-0 transition-all duration-300 ease-in-out group-hover:w-full`}/>
-            <Link
-                href={""}
-                className={`inline-flex w-full h-full justify-center ${primaryTextColor} group-hover:${secondaryTextColor} items-center font-semibold relative z-10`}
+                className={clsx(
+                    "inline-flex w-full h-full justify-center items-center font-semibold relative z-10",
+                    isSubmitted ? "text-black" : primaryTextColor,
+                    !isSubmitted && `group-hover:${secondaryTextColor}`
+                )}
             >
-                {text}
-            </Link>
+                {isSubmitted ? "Odesláno" : text}
+            </span>
         </ShadCNButton>
     );
 }

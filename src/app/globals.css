@@ -105,7 +105,7 @@ html {
   width: calc(50% - 5px);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .twoImagesParentContainer img {
     width: calc(43% - 5px);
   }
@@ -122,4 +122,3 @@ html {
     width: calc(40% - 5px);
   }
 }
-

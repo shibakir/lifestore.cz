@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input"
 import {formSchema} from "@/schemas/schema"
 import {Button} from "@headlessui/react";
 import Title from "@/common/Title";
+import {useState} from "react";
 
 const variants = {
     light: {
@@ -54,11 +55,21 @@ export function FooterFormClients({id, variant}) {
             name: "",
             email: "",
             phone: "",
+            note: "",
         },
     })
 
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     function onSubmit(values) {
-        console.log(values)
+        console.log(values);
+
+        setIsSubmitted(true);
+
+        setTimeout(() => {
+            setIsSubmitted(false);
+            form.reset()
+        }, 1000);
     }
 
     return (
@@ -145,9 +156,11 @@ export function FooterFormClients({id, variant}) {
                 />
                 <SubmitButton
                     text="Odeslat zprávu"
-                    className={`font-bold pl-5 pr-5 mt-auto`}
+                    isSubmitted={isSubmitted}
+                    className="font-bold pl-5 pr-5 mt-auto"
                     variant={submitButtonStyle}
                 />
+
             </form>
         </Form>
     )

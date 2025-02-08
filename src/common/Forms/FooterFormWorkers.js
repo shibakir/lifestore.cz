@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input"
 import {formSchema} from "@/schemas/schema"
 import Title from "@/common/Title";
+import {useState} from "react";
 
 const variants = {
     light: {
@@ -48,12 +49,48 @@ export function FooterFormWorkers({id, variant}) {
             name: "",
             email: "",
             phone: "",
-
+            note: "",
         },
     })
 
-    function onSubmit(values) {
-        console.log(values)
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
+    async function onSubmit(values) {
+
+        console.log(values);
+
+        const formData = new FormData();
+        formData.append("name", values.name);
+        formData.append("email", values.email);
+        formData.append("phone", values.phone);
+        formData.append("note", values.note);
+
+        if (values.images && values.images.length > 0) {
+            Array.from(values.images).forEach((file) => {
+                formData.append("images", file);
+            });
+        }
+
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                body: formData,
+            });
+
+            if (response.ok) {
+                console.log("E-mail SUCCESSFUL");
+            } else {
+                console.error("E-mail ERROR");
+            }
+        } catch (error) {
+            console.error("ERROR:", error);
+        }
+
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsSubmitted(false);
+            form.reset();
+        }, 1000);
     }
 
     return (
@@ -67,7 +104,6 @@ export function FooterFormWorkers({id, variant}) {
                 onSubmit={form.handleSubmit(onSubmit)}
                 className="w-full h-full space-y-5"
             >
-
                 <FormField
                     control={form.control}
                     name="name"
@@ -138,8 +174,47 @@ export function FooterFormWorkers({id, variant}) {
                         </FormItem>
                     )}
                 />
+                <FormField
+                    control={form.control}
+                    name="images"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel className={`${textColorPrimary}`}>
+                                Přiložit fotografii
+                            </FormLabel>
+                            <FormControl>
+                                <div className="flex flex-col gap-2">
+                                    <input
+                                        type="file"
+                                        multiple
+                                        accept="image/*"
+                                        className="hidden"
+                                        id="file-upload"
+                                        onChange={(e) => field.onChange(e.target.files)}
+                                    />
+
+                                    <label
+                                        htmlFor="file-upload"
+                                        className="cursor-pointer bg-button-button-4 text-text-secondary px-4 py-2 rounded-md"
+                                    >
+                                        Vybrat soubory
+                                    </label>
+
+                                    {field.value && field.value.length > 0 && (
+                                        <div className="text-sm text-gray-600">
+                                            Vybráno: {Array.from(field.value).map(file => file.name).join(", ")}
+                                        </div>
+                                    )}
+                                </div>
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+
                 <SubmitButton
                     text="Odeslat zprávu"
+                    isSubmitted={isSubmitted}
                     className={`font-bold pl-5 pr-5 mt-auto`}
                     variant={"dark"}
                 />
