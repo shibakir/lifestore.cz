@@ -12,7 +12,7 @@ export default function LogoList() {
     return (
         <div className="m-10 flex flex-row flex-wrap items-center justify-center">
             {items.map((item, index) => (
-                <div className="mt-5 mb-5 w-full md:w-1/2 xl:w-1/4 flex justify-center" key={item.id}>
+                <div className="mt-2 mb-2 lg:mt-5 lg:mb-5 w-full md:w-1/2 xl:w-1/4 flex justify-center" key={item.id}>
                     <Logo src={item.src} alt={item.alt}/>
                 </div>
             ))}

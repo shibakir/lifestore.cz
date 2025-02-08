@@ -64,7 +64,7 @@ export function FooterFormClients({id, variant}) {
     return (
         <Form {...form}>
             <Title
-                className={`${textColorPrimary} lg:hidden mb-3 text-xl font-normal leading-tight`}
+                className={`${textColorPrimary} lg:hidden mt-5 mb-3 text-xl font-normal leading-tight`}
                 title={"Kontaktní formulář"}
             />
             <form

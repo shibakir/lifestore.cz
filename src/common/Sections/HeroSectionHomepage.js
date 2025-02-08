@@ -12,11 +12,14 @@ export default function HeroSectionHomepage() {
                             rounded-bl-[5vw] rounded-br-[5vw] relative">
                 <div className="main flex flex-row h-full">
                     <div className=" w-1/2 flex flex-col justify-center">
-                        <h1 className="font-[600] text-md lg:text-2xl lg:leading-[30px] xl:text-3xl xl:leading-[40px] 2xl:text-4xl 2xl:leading-[56px] text-text-secondary">
+                        <h1 className="font-[600] text-md lg:text-2xl leading-[20px] lg:leading-[30px] xl:text-3xl xl:leading-[40px] 2xl:text-4xl 2xl:leading-[56px] text-text-secondary">
                             Vaše akce,<br/>náš profesionální tým
                         </h1>
-                        <p className="text-xs md:text-md lg:text-lg xl:text-xl mt-2 md:mt-5 mb-5 md:mb-10">
+                        <p className="hidden sm:block text-xs md:text-md lg:text-lg xl:text-xl mt-2 md:mt-5 mb-5 md:mb-10">
                             Pomáháme vaší společnosti vyniknout mezi konkurencí.<br/>
+                            Spolehlivost a kvalita je naším standardem!
+                        </p>
+                        <p className="block sm:hidden text-xs md:text-md lg:text-lg xl:text-xl mt-2 md:mt-5 mb-5 md:mb-10">
                             Spolehlivost a kvalita je naším standardem!
                         </p>
                         <div>

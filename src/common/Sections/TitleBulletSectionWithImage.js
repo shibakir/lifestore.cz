@@ -21,7 +21,7 @@ export default function TitleBulletSectionWithImage({ title, text="", items, ima
                         <hr className="flex-grow ml-8 h-0.5 sm:h-1 bg-background-quaternary border-none"/>
                     </div>
                     {text &&
-                        <div className="lg:w-3/4 pt-8">
+                        <div className="lg:w-3/4 pt-6 lg:pt-8">
                             <Text text={text}/>
                         </div>
                     }

@@ -22,7 +22,7 @@ export default function HomepageHeroButton({ text, link, variant }) {
 
     return (
         <ShadCNButton
-            className={`min-w-fit group relative transition transform ${primaryColor} duration-200 ease-in-out p-4 lg:p-6 overflow-hidden`}
+            className={`min-w-fit group relative transition transform ${primaryColor} duration-200 ease-in-out p-4 lg:p-8 overflow-hidden`}
             style={{ borderRadius: "9999px", position: "relative" }}
         >
             <span className={`absolute inset-0 ${secondaryColor} w-0 transition-all duration-300 ease-in-out group-hover:w-full`}/>

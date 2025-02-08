@@ -105,10 +105,10 @@ export default function Header() {
                 </div>
                 <div className="w-5/12 space-x-5 flex items-center justify-end">
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} className="text-xl text-text-secondary transition-transform duration-200 hover:scale-150 hover:text-text-tertiary"/>
+                        <FontAwesomeIcon icon={faInstagram} className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebookF} className="text-xl text-text-secondary transition-transform duration-200 hover:scale-150 hover:text-text-tertiary"/>
+                        <FontAwesomeIcon icon={faFacebookF} className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
                     </a>
                 </div>
             </div>

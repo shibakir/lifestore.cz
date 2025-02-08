@@ -5,7 +5,7 @@ export default function BulletList({ items }) {
     const isEven = items.length % 2 === 0;
 
     return (
-        <div className="mt-5 flex flex-row flex-wrap">
+        <div className="mt-4 lg:mt-5 flex flex-row flex-wrap">
             {items.map((item) => (
                 <div
                     key={item.id}

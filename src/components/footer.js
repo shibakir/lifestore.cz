@@ -224,12 +224,12 @@ export default function Footer({ pathname }) {
                                 <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
                                     {(variant === "clients-dark") &&
                                         <Link href="/">
-                                            <Image src="website/lifestore-logo-white.svg" alt="Logo" width={150} height={150}/>
+                                            <Image src="website/lifestore-logo-white.svg" alt="Logo" width={190} height={95}/>
                                         </Link>
                                     }
                                     {(variant === "clients-light" || variant === "workers") &&
                                         <Link href="/">
-                                            <Image src="website/lifestore-logo-green.svg" alt="Logo" width={150} height={150}/>
+                                            <Image src="website/lifestore-logo-green.svg" alt="Logo" width={190} height={95}/>
                                         </Link>
                                     }
                                     <Text
@@ -246,7 +246,7 @@ export default function Footer({ pathname }) {
                         </div>
                     </div>
                     <div className="hidden lg:block lg:w-1/3"/>
-                    <div className="mt-5 mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col lg:items-center">
+                    <div className="mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col lg:items-center">
                         {
                             (variant === "workers") && // workers
                             <FooterFormWorkers id={"formular-pro-hostesky"} variant={"light"}/>

@@ -20,8 +20,8 @@ export default function Homepage() {
               <Image
                   src="/homepage-2.png"
                   alt="workers"
-                  width={800}
-                  height={800}
+                  width={913}
+                  height={607}
                   unoptimized
               />
             </div>
