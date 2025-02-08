@@ -3,11 +3,12 @@ import LogoList from "@/common/LogoList/LogoList";
 import DoubleImageSection from "@/common/Sections/DoubleImageSection";
 import TextSectionWithButton from "@/common/Sections/TextSectionWithButton";
 import HeroSectionHomepage from "@/common/Sections/HeroSectionHomepage";
+import { metadata } from "@/constants/metadata";
 
-export const metadata = {
-    title: "Lifestore s.r.o",
-    description: "Lifestore s.r.o. Pomáháme vaší společnosti vyniknout mezi konkurencí.Spolehlivost a kvalita je naším standardem!",
-};
+export const generateMetadata = () => ({
+    title: metadata.homepage.title,
+    description: metadata.homepage.description,
+});
 
 export default function Homepage() {
   return (

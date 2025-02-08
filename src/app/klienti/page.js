@@ -1,11 +1,12 @@
 import HeroSection from "@/common/Sections/HeroSection";
 import TitleBulletSectionWithImage from "@/common/Sections/TitleBulletSectionWithImage";
 import ActionSection from "@/common/ActionSection/ActionSection";
+import { metadata } from "@/constants/metadata";
 
-export const metadata = {
-    title: "Lifestore s.r.o - Klienti",
-    description: "Najděte spolehlivé brigádníky – když je každá minuta důležitá",
-};
+export const generateMetadata = () => ({
+    title: metadata.clients.title,
+    description: metadata.clients.description,
+});
 
 export default function Client() {
 

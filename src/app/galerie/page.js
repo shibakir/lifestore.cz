@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Title from "@/common/Title";
 import ActionButton from "@/common/Buttons/ActionButton";
+import { metadata } from "@/constants/metadata";
 
-export const metadata = {
-    title: "Lifestore s.r.o - Galerie",
-    description: "Náš tým v akci, Naše kostýmy",
-};
+export const generateMetadata = () => ({
+    title: metadata.gallery.title,
+    description: metadata.gallery.description,
+});
 
 function ImagesCollageDesktop({ images, buttonText }) {
     return (

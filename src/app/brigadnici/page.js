@@ -1,11 +1,12 @@
 import HeroSection from "@/common/Sections/HeroSection";
 import TitleBulletSectionWithImage from "@/common/Sections/TitleBulletSectionWithImage";
 import ActionSection from "@/common/ActionSection/ActionSection";
+import { metadata } from "@/constants/metadata";
 
-export const metadata = {
-    title: "Lifestore s.r.o - Brigádníky",
-    description: "Připojte se k Lifestore a prožijte brigádu jinak!",
-};
+export const generateMetadata = () => ({
+    title: metadata.workers.title,
+    description: metadata.workers.description,
+});
 
 export default function Work() {
 
