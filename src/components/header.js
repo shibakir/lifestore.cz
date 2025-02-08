@@ -16,7 +16,7 @@ export default function Header() {
     const pathname = usePathname();
 
     return (
-        <header className="bg-background-secondary fixed top-0 left-0 w-full z-50 shadow-md">
+        <header className="bg-background-secondary fixed top-0 left-0 w-full z-50 shadow-md h-[70px] flex items-center">
             <div className="main flex row pt-4 pb-4">
                 <div className="hidden 2xl:flex w-5/12 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
@@ -99,16 +99,18 @@ export default function Header() {
                             alt="Logo"
                             width={48}
                             height={48}
-                           className="w-9 h-9 lg:w-10 lg:h-10"
+                            className="w-9 h-9 lg:w-10 lg:h-10"
                         />
                     </Link>
                 </div>
                 <div className="w-5/12 space-x-5 flex items-center justify-end">
                     <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
+                        <FontAwesomeIcon icon={faInstagram}
+                                         className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
                     </a>
                     <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebookF} className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
+                        <FontAwesomeIcon icon={faFacebookF}
+                                         className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
                     </a>
                 </div>
             </div>

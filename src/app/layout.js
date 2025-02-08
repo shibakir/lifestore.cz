@@ -11,7 +11,6 @@ const montserrat = Montserrat({
     weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
-
 export default function RootLayout({ children }) {
 
     const pathname = usePathname();
@@ -20,7 +19,7 @@ export default function RootLayout({ children }) {
         <html lang="cs">
         <body className={`layout ${montserrat.className}`}>
         <Header/>
-        <main className="content">
+        <main className="content pt-[70px]">
             {children}
         </main>
         <Footer pathname={pathname}/>
