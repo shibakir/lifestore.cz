@@ -84,9 +84,9 @@ export default function Footer({ pathname }) {
             <div
                 className={`pt-10 lg:pt-20 pb-10 lg:pb-20 rounded-tl-[10vw] rounded-tr-[10vw] ${mainColor}`}
             >
-                <div className="main flex flex-col lg:flex-row">
-                    <div className="w-full xl:w-1/3">
-                        <div className="min-h-full grid grid-cols-1 lg:grid-rows-3 gap-4">
+                <div className="main flex flex-col lg:flex-row lg:space-x-5">
+                    <div className="w-full lg:w-6/12 2xl:w-1/3 max-w-[520px]">
+                        <div className="min-h-full flex flex-col justify-between gap-4">
                             <div className="w-full lg:w-3/4">
                                 <Title
                                     className={`${textColorPrimary} xl:min-w-[700px] mb-3 text-xl font-normal leading-tight`}
@@ -233,7 +233,7 @@ export default function Footer({ pathname }) {
                                         </Link>
                                     }
                                     <Text
-                                        className={`${textColorPrimary} tracking-tight text-[10px] lg:text-sm`}
+                                        className={`${textColorPrimary} tracking-tight text-[10px] lg:text-xs 3xl:text-lg`}
                                         text={
                                             "LifeStore s.r.o.\n"
                                             + "IČO: 24123820\n"
@@ -245,8 +245,8 @@ export default function Footer({ pathname }) {
                             </div>
                         </div>
                     </div>
-                    <div className="hidden lg:block lg:w-1/3"/>
-                    <div className="mb-10 lg:mb-0 w-full xl:w-1/3 flex flex-col lg:items-center">
+                    <div className="hidden lg:block lg:w-1/12 2xl:w-1/3"/>
+                    <div className="mb-10 lg:mb-0 w-full lg:w-5/12 2xl:w-1/3 flex flex-col lg:items-center">
                         {
                             (variant === "workers") && // workers
                             <FooterFormWorkers id={"formular-pro-hostesky"} variant={"light"}/>
@@ -260,14 +260,14 @@ export default function Footer({ pathname }) {
                             <FooterFormClients id={"formular-pro-klienty"} variant={"dark"}/>
                         }
                     </div>
-                    <div className="flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
-                        <div className="mt-5 lg:mt-0 flex flex-row place-items-center justify-between w-full">
-                            {(variant === "workers" || variant === "clients-dark") &&
+                    <div className=" lg:w-5/12 flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
+                        <div className="mt-5 lg:mt-0 flex flex-row place-items-end md:place-items-center justify-between w-full">
+                            {(variant === "clients-dark") &&
                                 <Link href="/">
                                     <Image src="website/lifestore-logo-white.svg" alt="Logo" width={80} height={45}/>
                                 </Link>
                             }
-                            {(variant === "clients-light") &&
+                            {(variant === "workers" || variant === "clients-light") &&
                                 <Link href="/">
                                     <Image src="website/lifestore-logo-green.svg" alt="Logo" width={80} height={45}/>
                                 </Link>

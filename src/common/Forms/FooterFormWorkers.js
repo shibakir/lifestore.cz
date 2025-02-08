@@ -94,131 +94,133 @@ export function FooterFormWorkers({id, variant}) {
     }
 
     return (
-        <Form {...form}>
-            <Title
-                className={`${textColorPrimary} lg:hidden mb-3 text-xl font-normal leading-tight`}
-                title={"Kontaktní formulář"}
-            />
-            <form
-                id={id}
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="w-full h-full space-y-5"
-            >
-                <FormField
-                    control={form.control}
-                    name="name"
-                    render={({field}) => (
-                        <FormItem>
-                            <FormLabel
-                                className={`${textColorPrimary}`}
-                            >Jméno a přijmení
-                            </FormLabel>
-                            <FormControl>
-                                <Input {...field} className={`${mainColor} border-0`}/>
-                            </FormControl>
-                            <FormMessage/>
-                        </FormItem>
-                    )}
+        <div className="w-full h-full grow">
+            <Form {...form}>
+                <Title
+                    className={`${textColorPrimary} lg:hidden mt-5 mb-3 text-xl font-normal leading-tight`}
+                    title={"Kontaktní formulář"}
                 />
-                <FormField
-                    control={form.control}
-                    name="email"
-                    render={({field}) => (
-                        <FormItem>
-                            <FormLabel
-                                className={`${textColorPrimary}`}
-                            >
-                                E-mail
-                            </FormLabel>
-                            <FormControl>
-                                <Input {...field} className={`${mainColor} border-0`}/>
-                            </FormControl>
-                            <FormMessage/>
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({field}) => (
-                        <FormItem>
-                            <FormLabel
-                                className={`${textColorPrimary}`}
-                            >
-                                Telefonní číslo
-                            </FormLabel>
-                            <FormControl>
-                                <Input {...field} className={`${mainColor} border-0`}/>
-                            </FormControl>
-                            <FormMessage/>
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="note"
-                    render={({field}) => (
-                        <FormItem>
-                            <FormLabel
-                                className={`${textColorPrimary}`}
-                            >
-                                Zpráva
-                            </FormLabel>
-                            <FormControl>
-                            <textarea {...field}
-                                      className={`${mainColor} border-0 w-full p-2 resize-none rounded-md`}
-                                      style={{minHeight: "220px"}}
-                            />
-                            </FormControl>
-                            <FormMessage/>
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="images"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel className={`${textColorPrimary}`}>
-                                Přiložit fotografii
-                            </FormLabel>
-                            <FormControl>
-                                <div className="flex flex-col gap-2">
-                                    <input
-                                        type="file"
-                                        multiple
-                                        accept="image/*"
-                                        className="hidden"
-                                        id="file-upload"
-                                        onChange={(e) => field.onChange(e.target.files)}
-                                    />
+                <form
+                    id={id}
+                    onSubmit={form.handleSubmit(onSubmit)}
+                    className="w-full h-full space-y-5"
+                >
+                    <FormField
+                        control={form.control}
+                        name="name"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel
+                                    className={`${textColorPrimary}`}
+                                >Jméno a přijmení
+                                </FormLabel>
+                                <FormControl>
+                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="email"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel
+                                    className={`${textColorPrimary}`}
+                                >
+                                    E-mail
+                                </FormLabel>
+                                <FormControl>
+                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel
+                                    className={`${textColorPrimary}`}
+                                >
+                                    Telefonní číslo
+                                </FormLabel>
+                                <FormControl>
+                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="note"
+                        render={({field}) => (
+                            <FormItem>
+                                <FormLabel
+                                    className={`${textColorPrimary}`}
+                                >
+                                    Zpráva
+                                </FormLabel>
+                                <FormControl>
+                                <textarea {...field}
+                                          className={`${mainColor} border-0 w-full p-2 resize-none rounded-md`}
+                                          style={{minHeight: "220px"}}
+                                />
+                                </FormControl>
+                                <FormMessage/>
+                            </FormItem>
+                        )}
+                    />
+                    <FormField
+                        control={form.control}
+                        name="images"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel className={`${textColorPrimary}`}>
+                                    Přiložit fotografii
+                                </FormLabel>
+                                <FormControl>
+                                    <div className="flex flex-col gap-2">
+                                        <input
+                                            type="file"
+                                            multiple
+                                            accept="image/*"
+                                            className="hidden"
+                                            id="file-upload"
+                                            onChange={(e) => field.onChange(e.target.files)}
+                                        />
 
-                                    <label
-                                        htmlFor="file-upload"
-                                        className="cursor-pointer bg-button-button-4 text-text-secondary px-4 py-2 rounded-md"
-                                    >
-                                        Vybrat soubory
-                                    </label>
+                                        <label
+                                            htmlFor="file-upload"
+                                            className="cursor-pointer bg-button-button-4 text-text-secondary px-4 py-2 rounded-md"
+                                        >
+                                            Vybrat soubory
+                                        </label>
 
-                                    {field.value && field.value.length > 0 && (
-                                        <div className="text-sm text-gray-600">
-                                            Vybráno: {Array.from(field.value).map(file => file.name).join(", ")}
-                                        </div>
-                                    )}
-                                </div>
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
+                                        {field.value && field.value.length > 0 && (
+                                            <div className="text-sm text-gray-600">
+                                                Vybráno: {Array.from(field.value).map(file => file.name).join(", ")}
+                                            </div>
+                                        )}
+                                    </div>
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
 
-                <SubmitButton
-                    text="Odeslat zprávu"
-                    isSubmitted={isSubmitted}
-                    className={`font-bold pl-5 pr-5 mt-auto`}
-                    variant={"dark"}
-                />
-            </form>
-        </Form>
+                    <SubmitButton
+                        text="Odeslat zprávu"
+                        isSubmitted={isSubmitted}
+                        className={`font-bold pl-5 pr-5 mt-auto`}
+                        variant={"dark"}
+                    />
+                </form>
+            </Form>
+        </div>
     )
 }
