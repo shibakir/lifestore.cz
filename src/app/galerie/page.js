@@ -1,73 +1,11 @@
-import Image from "next/image";
 import Title from "@/common/Title";
-import ActionButton from "@/common/Buttons/ActionButton";
 import { metadata } from "@/constants/metadata";
-import GalleryCarousel from "@/app/galerie/GalleryCarousel";
+import {ImagesCollageDesktop, ImagesCollageMobile} from "@/app/galerie/GalleryCarousel";
 
 export const generateMetadata = () => ({
     title: metadata.gallery.title,
     description: metadata.gallery.description,
 });
-
-function ImagesCollageDesktop({ images, buttonText }) {
-    return (
-        <div className="ml-[-17] w-full">
-            <div className="flex flex-row flex-wrap">
-                {images.map((item, index) => (
-                    <div
-                        key={item.id}
-                        className={`
-                            ${index === 0 || index === 5 ? "w-1/2" : "w-1/4"}
-                            ${index === 3 || index === 4 ? "sm:mt-[-15px] md:mt-[-26px] lg:mt-[-36px] xl:mt-[-46px] 2xl:mt-[-56px]" : ""}
-                        `}
-                    >
-                        <Image
-                            src={item.image}
-                            alt={`Gallery Image ${item.id}`}
-                            width={index === 0 || index === 5 ? 652 : 308}
-                            height={index === 0 || index === 5 ? 321 : 364}
-                            className="w-full h-auto p-5"
-                        />
-                    </div>
-                ))}
-            </div>
-            <div className="flex justify-end mt-4 pr-5">
-                <GalleryCarousel images={images} buttonText={buttonText}/>
-            </div>
-        </div>
-    );
-}
-
-function ImagesCollageMobile({images, buttonText}) {
-    return (
-        <div>
-            <div className="flex flex-row flex-wrap">
-                {images.map((item, index) => (
-                    <div
-                        key={item.id}
-                        className={`
-                                ${index === 0 || index === 5 ? "w-full" : "w-1/2"}
-                                ${index === 1 || index === 4 ? "hidden" : ""}
-                                ${index === 2 ? "pr-2" : ""}
-                                ${index === 3 ? "pl-2" : ""}
-                            `}
-                    >
-                        <Image
-                            src={item.image}
-                            alt={`Gallery Image ${item.id}`}
-                            width={index === 0 || index === 5 ? 652 : 308}
-                            height={index === 0 || index === 5 ? 321 : 364}
-                            className="w-full h-auto pt-2 pb-2"
-                        />
-                    </div>
-                ))}
-            </div>
-            <div className="flex justify-center mt-4">
-                <GalleryCarousel images={images} buttonText={buttonText}/>
-            </div>
-        </div>
-)
-}
 
 function GallerySection({title, images, buttonText, id}) {
     return (
