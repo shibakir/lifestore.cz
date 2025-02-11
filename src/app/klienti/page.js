@@ -14,17 +14,17 @@ export default function Client() {
     const secondImageSrc = "/homepage-small.png"
 
     const itemsFirst = [
-        { id:1, title: "Hostesky a promotéři", text: "Profesionální tým pro firemní akce, veletrhy, road show, prezentace ochutnávky a další." },
-        { id:2, title: "Personál pro hotely a restaurace", text: "Zajišťujeme vše od brigádníků na debaras po servírky a obsluhu recepcí s důrazem na kvalitu služeb." },
-        { id:3, title: "Brigádníci", text: "Tým brigádníků pro podporu vašeho podnikání. Nabízíme sekretářky, bedňáky a více." },
-        { id:4, title: "Digitální obsah", text: "Nabízíme brigádníky na správu digitálního obsahu. Od správy sociálních sítí, po tvorbu videí." },
+        { id:1, title: "Eventové hostesky", text: "Perfektně připravené hostesky pro vaše firemní události, koncerty, road show a mnoho dalších příležitostí." },
+        { id:2, title: "Promo hostesky", text: "Expertky na propagaci vašich produktů a služeb na veletrzích, festivalech, ochutnávkách a jiných eventech." },
+        { id:3, title: "VIP hostesky", text: "Exkluzivní hostesky splňující nejvyšší standardy vzhledu a profesionality. Jednotně upravené pro vaše nejdůležitější akce." },
+        { id:4, title: "Recepční hostesky", text: "Poskytujeme profesionální a přátelskou obsluhu pro vaše hotelové a firemní recepce." },
     ];
 
     const itemsSecond = [
-        { id:1, title: "Hostesky a promotéři", text: "Profesionální tým pro firemní akce, veletrhy, road show, prezentace ochutnávky a další." },
-        { id:2, title: "Personál pro hotely a restaurace", text: "Zajišťujeme vše od brigádníků na debaras po servírky a obsluhu recepcí s důrazem na kvalitu služeb." },
-        { id:3, title: "Brigádníci", text: "Tým brigádníků pro podporu vašeho podnikání. Nabízíme sekretářky, bedňáky a více." },
-        { id:4, title: "Digitální obsah", text: "Nabízíme brigádníky na správu digitálního obsahu. Od správy sociálních sítí, po tvorbu videí." },
+        { id:1, title: "Číšníci a servírky", text: "Zkušení profesionálové připraveni poskytnout prvotřídní obsluhu vašim zákazníkům." },
+        { id:2, title: "Obsluha zákazníků", text: "Naši brigádníci jsou vyškoleni, aby poskytovali rychlou a přátelskou obsluhu, což zajišťuje, že každý zákazník odchází spokojen." },
+        { id:3, title: "Pracovníci na debaras", text: "Efektivní tým, který udrží váš provoz čistý a organizovaný." },
+        { id:4, title: "Snídaňové hostesky", text: "Zajistíme, aby vaše ranní snídaňová nabídka byla prezentována s elegancí a profesionalitou." },
     ];
 
     const itemsThird = [

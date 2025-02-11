@@ -13,11 +13,11 @@ export default function TextSectionWithButton({title, text, buttonText, link, cl
         >
             <Title
                 title={title}
-                className="mb-2"
+                className="!mb-3"
             />
             <Text
                 text={text}
-                className="mb-10"
+                className="!mb-8"
             />
             <ActionButton
                 text={buttonText}

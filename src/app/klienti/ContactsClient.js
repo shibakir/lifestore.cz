@@ -39,15 +39,11 @@ function SingleContact({ name, text, image }) {
 
 export default function ContactsClient() {
     const people = [
-        { id: 1, name: "Jana Nováková1", image: "/Contacts_sample.png", title: "Koordinátorka brigádníků na akcích" },
-        { id: 2, name: "Jana Nováková2", image: "/Contacts_sample.png", title: "Koordinátorka brigádníků na akcích" },
-        { id: 3, name: "Jana Nováková3", image: "/Contacts_sample.png", title: "Koordinátorka" },
-        { id: 4, name: "Jana Nováková4", image: "/Contacts_sample.png", title: "Koordinátorka brigádníků na akcích" },
-        { id: 5, name: "Jana Nováková5", image: "/Contacts_sample.png", title: "Koordinátorka" },
-        { id: 6, name: "Jana Nováková6", image: "/Contacts_sample.png", title: "Koordinátorka brigádníků na akcích" },
-        { id: 7, name: "Jana Nováková7", image: "/Contacts_sample.png", title: "Koordinátorka brigádníků na akcích" },
-        { id: 8, name: "Jana Nováková8", image: "/Contacts_sample.png", title: "Koordinátorka" },
-        { id: 9, name: "Jana Nováková9", image: "/Contacts_sample.png", title: "Koordinátorka brigádníků na akcích" },
+        { id: 1, name: "Marika Pušová", image: "/Contacts_sample.png", title: "Jednatelka společnosti" },
+        { id: 2, name: "Michaela Šprynarová", image: "/Contacts_sample.png", title: "Zástupce jednatelky" },
+        { id: 3, name: "Viktorie Rakušanová", image: "/Contacts_sample.png", title: "Senior event manager" },
+        { id: 4, name: "Ondřej Laibl", image: "/Contacts_sample.png", title: "Event manager" },
+        { id: 5, name: "Jiří Komínke", image: "/Contacts_sample.png", title: "Event manager" },
     ];
 
     const [visibleCount, setVisibleCount] = useState(people.length);
@@ -57,18 +53,18 @@ export default function ContactsClient() {
         const checkScreenSize = () => {
             if (window.innerWidth <= 768) {
                 setIsMobile(true);
-                setVisibleCount(3); // На мобильных показываем 3 контакта
+                setVisibleCount(3);
             } else {
                 setIsMobile(false);
-                setVisibleCount(people.length); // На больших экранах показываем всех
+                setVisibleCount(people.length);
             }
         };
 
-        checkScreenSize(); // Проверяем при загрузке
-        window.addEventListener("resize", checkScreenSize); // Следим за изменением размера окна
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize);
 
         return () => {
-            window.removeEventListener("resize", checkScreenSize); // Очищаем слушатель событий при размонтировании
+            window.removeEventListener("resize", checkScreenSize);
         };
     }, []);
 
