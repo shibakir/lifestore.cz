@@ -41,47 +41,22 @@ export default function Header() {
                         >
                             Pro brigádníky
                         </NavLink>
-                        <DropdownMenu key={4} asChild>
-                            <DropdownMenuTrigger>
-                                <NavLink
-                                    key={50}
-                                    href={""}
-                                    active={pathname.startsWith("/galerie")}
-                                >
-                                    Galerie
-                                </NavLink>
-
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                sideOffset={5}
-                                align="start"
-                                onCloseAutoFocus={(e) => e.preventDefault()}
-                                className="shadow-none flex flex-col space-y-2 bg-background-secondary"
-                            >
-                                <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
-                                    <NavLink
-                                        key={51}
-                                        href="/galerie#nas-tym-v-akci"
-                                        active={pathname === "/galerie#nas-tym-v-akci"}
-                                        className="!text-lg"
-                                    >
-                                        Náš tým v akci
-                                    </NavLink>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="focus:bg-transparent cursor-pointer" asChild>
-                                    <NavLink
-                                        key={52}
-                                        href="/galerie#nase-kostymy"
-                                        active={pathname === "/galerie#nase-kostymy"}
-                                        className="!text-lg"
-                                    >
-                                        Naše kostýmy
-                                    </NavLink>
-                                </DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                        <NavLink
+                            key={4}
+                            href={"/galerie"}
+                            active={pathname === "/galerie"}
+                        >
+                            Galerie
+                        </NavLink>
                         <NavLink
                             key={5}
+                            href={"/kostymy"}
+                            active={pathname === "/kostymy"}
+                        >
+                            Kostýmy
+                        </NavLink>
+                        <NavLink
+                            key={6}
                             href={"/kontakty"}
                             active={pathname === "/kontakty"}
                         >

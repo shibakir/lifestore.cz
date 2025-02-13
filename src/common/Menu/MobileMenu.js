@@ -14,12 +14,6 @@ import {useState} from "react";
 export default function MobileMenu({pathname}) {
 
     const [open, setOpen] = useState(false);
-    const [subMenuOpen, setSubMenuOpen] = useState(false);
-
-    const handleClose = () => {
-        setOpen(false);
-        setSubMenuOpen(false);
-    };
 
     return (
         <DropdownMenu open={open} onOpenChange={setOpen}>
@@ -62,46 +56,24 @@ export default function MobileMenu({pathname}) {
                         </NavLink>
                     </DropdownMenuItem>
                     <DropdownMenuItem key={4} asChild>
-                        <DropdownMenu open={subMenuOpen} onOpenChange={setSubMenuOpen}>
-                            <DropdownMenuTrigger
-                                className={
-                                    "inline-flex items-center px-1 pt-1 border-b-2 text-lg leading-5 transition duration-150 ease-in-out focus:outline-none border-transparent text-background-tertiary hover:border-background-tertiary focus:text-background-tertiary focus:border-background-tertiary"
-                                }
-                            >
-                                Galerie
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent
-                                sideOffset={5}
-                                align="center"
-                                onCloseAutoFocus={(e) => e.preventDefault()}
-                                className="shadow-none flex flex-col min-w-[200px] space-y-2 bg-background-secondary"
-                            >
-                                <DropdownMenuItem className="focus:bg-transparent flex justify-center text-center" asChild>
-                                    <NavLink
-                                        key={51}
-                                        href="/galerie#nas-tym-v-akci"
-                                        active={pathname === "/galerie#nas-tym-v-akci"}
-                                        className="!text-lg"
-                                        onClick={handleClose}
-                                    >
-                                        Náš tým v akci
-                                    </NavLink>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem className="focus:bg-transparent flex justify-center text-center" asChild>
-                                    <NavLink
-                                        key={52}
-                                        href="/galerie#nase-kostymy"
-                                        active={pathname === "/galerie#nase-kostymy"}
-                                        className="!text-lg"
-                                        onClick={handleClose}
-                                    >
-                                        Naše kostýmy
-                                    </NavLink>
-                                </DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                        <NavLink
+                            href={"/galerie"}
+                            active={pathname === "/galerie"}
+                            className="!text-lg"
+                        >
+                            Galerie
+                        </NavLink>
                     </DropdownMenuItem>
                     <DropdownMenuItem key={5} asChild>
+                        <NavLink
+                            href={"/kostymy"}
+                            active={pathname === "/kostymy"}
+                            className="!text-lg"
+                        >
+                            Kostýmy
+                        </NavLink>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem key={6} asChild>
                         <NavLink
                             href={"/kontakty"}
                             active={pathname === "/kontakty"}
