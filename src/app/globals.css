@@ -26,11 +26,13 @@ html {
     --color-button-3: #3E5B51;
     --color-button-4: #FAF4E9;
     --color-button-5: #E5F3CD;
+    --color-button-6: #F1F1F1;
 
     --color-background-primary: #FCFBF9;
     --color-background-secondary: #EAE4D8;
     --color-background-tertiary: #2E453D;
     --color-background-quaternary: #BCCDA0;
+    --color-background-shadow: #F1F1F1;
     --radius: 0.5rem;
   }
 }

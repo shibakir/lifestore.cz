@@ -29,7 +29,8 @@ module.exports = {
   				primary: 'var(--color-background-primary)',
   				secondary: 'var(--color-background-secondary)',
   				tertiary: 'var(--color-background-tertiary)',
-				quaternary: 'var(--color-background-quaternary)'
+				quaternary: 'var(--color-background-quaternary)',
+				shadow: 'var(--color-background-shadow)',
   			},
   			text: {
   				primary: 'var(--color-text-primary)',
@@ -42,6 +43,7 @@ module.exports = {
   				'button-3': 'var(--color-button-3)',
   				'button-4': 'var(--color-button-4)',
 				'button-5': 'var(--color-button-5)',
+				'button-6': 'var(--color-button-6)',
   			}
   		},
   		borderRadius: {
