@@ -87,6 +87,7 @@ export default function ContactsClient() {
                     {people.slice(0, visibleCount).map((item) => (
                        <div
                            key={item.id}
+                           className="xl:mb-10"
                        >
                             <SingleContact
 

@@ -87,19 +87,19 @@ export default function Header() {
                         </a>
                     </span>
                     <span id={2}>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faFacebookF}
                                              className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
                         </a>
                     </span>
                     <span id={3} className="hidden lg:block">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faLinkedinIn}
                                              className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
                         </a>
                     </span>
                     <span id={4} className="hidden lg:block">
-                        <a className="hidden lg:block" href="https://linkedin.com" target="_blank"
+                        <a className="hidden lg:block" href="https://tiktok.com" target="_blank"
                            rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faTiktok}
                                              className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>

@@ -1,5 +1,7 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import {FooterFormClients} from "@/common/Forms/FooterFormClients";
 import Button from "@/common/Buttons/Button";
 import Title from "@/common/Title";
@@ -49,6 +51,11 @@ const variants = {
         buttonTextColor: "text-text-primary"
     },
 };
+
+const instagramLink = "https://www.instagram.com";
+const facebookLink = "https://www.facebook.com";
+const linkedinLink = "https://www.linkedin.com";
+const tiktokLink = "https://www.tiktok.com";
 
 export default function Footer({ pathname }) {
 
@@ -120,16 +127,32 @@ export default function Footer({ pathname }) {
                                         <div>
                                             <Button
                                                 text="lifestore.cz"
-                                                link="https://www.lifestore.cz/"
+                                                link={instagramLink}
                                                 className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
                                                 icon={faInstagram}
                                                 variant={"light"}
                                             />
                                             <Button
                                                 text="Lifestore"
-                                                link="https://www.lifestore.cz/"
+                                                link={facebookLink}
                                                 className={`font-normal text-sm xl:text-lg p-6`}
                                                 icon={faFacebookF}
+                                                variant={"light"}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Button
+                                                text="lifestore.cz"
+                                                link={linkedinLink}
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                icon={faLinkedinIn}
+                                                variant={"light"}
+                                            />
+                                            <Button
+                                                text="Lifestore"
+                                                link={tiktokLink}
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                icon={faTiktok}
                                                 variant={"light"}
                                             />
                                         </div>
@@ -155,16 +178,32 @@ export default function Footer({ pathname }) {
                                         <div>
                                             <Button
                                                 text="lifestore.cz"
-                                                link="https://www.lifestore.cz/"
+                                                link={instagramLink}
                                                 className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
                                                 icon={faInstagram}
                                                 variant={"mild-green"}
                                             />
                                             <Button
                                                 text="Lifestore"
-                                                link="https://www.lifestore.cz/"
+                                                link={facebookLink}
                                                 className={`font-normal text-sm xl:text-lg p-6`}
                                                 icon={faFacebookF}
+                                                variant={"mild-green"}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Button
+                                                text="lifestore.cz"
+                                                link={linkedinLink}
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                icon={faLinkedinIn}
+                                                variant={"mild-green"}
+                                            />
+                                            <Button
+                                                text="Lifestore"
+                                                link={tiktokLink}
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                icon={faTiktok}
                                                 variant={"mild-green"}
                                             />
                                         </div>
@@ -190,16 +229,32 @@ export default function Footer({ pathname }) {
                                         <div>
                                             <Button
                                                 text="lifestore.cz"
-                                                link="https://www.lifestore.cz/"
+                                                link={instagramLink}
                                                 className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
                                                 icon={faInstagram}
                                                 variant={"mild-green"}
                                             />
                                             <Button
                                                 text="Lifestore"
-                                                link="https://www.lifestore.cz/"
+                                                link={facebookLink}
                                                 className={`font-normal text-sm xl:text-lg p-6`}
                                                 icon={faFacebookF}
+                                                variant={"mild-green"}
+                                            />
+                                        </div>
+                                        <div>
+                                            <Button
+                                                text="lifestore.cz"
+                                                link={linkedinLink}
+                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
+                                                icon={faLinkedinIn}
+                                                variant={"mild-green"}
+                                            />
+                                            <Button
+                                                text="Lifestore"
+                                                link={tiktokLink}
+                                                className={`font-normal text-sm xl:text-lg p-6`}
+                                                icon={faTiktok}
                                                 variant={"mild-green"}
                                             />
                                         </div>
@@ -218,18 +273,21 @@ export default function Footer({ pathname }) {
                                             />
                                         </div>
                                     </div>
+
                                 }
                             </div>
                             <div className="hidden lg:flex lg:flex-nowrap md:items-start lg:items-center 2xl:items-end">
                                 <div className="mt-5 lg:mt-0 flex flex-row items-end justify-between w-full">
                                     {(variant === "clients-dark") &&
                                         <Link href="/">
-                                            <Image src="website/lifestore-logo-white.svg" alt="Logo" width={190} height={95}/>
+                                            <Image src="website/lifestore-logo-white.svg" alt="Logo" width={190}
+                                                   height={95}/>
                                         </Link>
                                     }
                                     {(variant === "clients-light" || variant === "workers") &&
                                         <Link href="/">
-                                            <Image src="website/lifestore-logo-green.svg" alt="Logo" width={190} height={95}/>
+                                            <Image src="website/lifestore-logo-green.svg" alt="Logo" width={190}
+                                                   height={95}/>
                                         </Link>
                                     }
                                     <Text
