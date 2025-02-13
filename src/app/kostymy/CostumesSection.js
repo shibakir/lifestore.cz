@@ -89,7 +89,7 @@ export default function CostumesSection() {
     const [visibleCount, setVisibleCount] = useState(8);
 
     const loadMoreImages = () => {
-        setVisibleCount(prevCount => prevCount + 4);
+        setVisibleCount(prevCount => prevCount + 8);
     };
 
     const [selectedIndex, setSelectedIndex] = useState(0);
