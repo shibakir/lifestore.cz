@@ -31,6 +31,7 @@ const variants = {
         textColorPrimary: "text-text-secondary",
         buttonTextColor: "text-text-primary",
         submitButtonStyle: "dark",
+
     },
     dark: {
         mainColor: "bg-button-button-3",
@@ -95,7 +96,7 @@ export function FooterFormClients({id, variant}) {
                                 >Jméno a přijmení
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                    <Input {...field} className={`${mainColor} ${textColorPrimary} font-medium border-0`}/>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -112,7 +113,7 @@ export function FooterFormClients({id, variant}) {
                                     E-mail
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                    <Input {...field} className={`${mainColor} ${textColorPrimary} font-medium border-0`}/>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -129,7 +130,7 @@ export function FooterFormClients({id, variant}) {
                                     Telefonní číslo
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                    <Input {...field} className={`${mainColor} ${textColorPrimary} font-medium border-0`}/>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -147,7 +148,7 @@ export function FooterFormClients({id, variant}) {
                                 </FormLabel>
                                 <FormControl>
                             <textarea {...field}
-                                      className={`${mainColor} border-0 w-full p-2 resize-none rounded-md`}
+                                      className={`${mainColor} border-0 w-full p-2 resize-none rounded-md ${textColorPrimary} font-medium`}
                                       style={{minHeight: "220px"}}
                             />
                                 </FormControl>

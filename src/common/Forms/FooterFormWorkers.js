@@ -115,7 +115,7 @@ export function FooterFormWorkers({id, variant}) {
                                 >Jméno a přijmení
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                    <Input {...field} className={`${mainColor} text-text-secondary font-medium border-0`}/>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -132,7 +132,7 @@ export function FooterFormWorkers({id, variant}) {
                                     E-mail
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                    <Input {...field} className={`${mainColor} text-text-secondary font-medium border-0`}/>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -149,7 +149,7 @@ export function FooterFormWorkers({id, variant}) {
                                     Telefonní číslo
                                 </FormLabel>
                                 <FormControl>
-                                    <Input {...field} className={`${mainColor} border-0`}/>
+                                    <Input {...field} className={`${mainColor} text-text-secondary font-medium border-0`}/>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>
@@ -167,7 +167,7 @@ export function FooterFormWorkers({id, variant}) {
                                 </FormLabel>
                                 <FormControl>
                                 <textarea {...field}
-                                          className={`${mainColor} border-0 w-full p-2 resize-none rounded-md`}
+                                          className={`${mainColor} border-0 w-full p-2 resize-none text-text-secondary font-medium rounded-md`}
                                           style={{minHeight: "220px"}}
                                 />
                                 </FormControl>
