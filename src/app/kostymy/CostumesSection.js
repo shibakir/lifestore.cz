@@ -136,7 +136,7 @@ export default function CostumesSection() {
                             </div>
                             <div className="p-4 rounded-bl-[2vh] rounded-br-[2vh] bg-background-secondary">
                                 <div className="w-2/3 lg:w-1/2 flex flex-row items-center justify-between">
-                                    <p className="text-sm text-text-secondary">{item.text}</p>
+                                    <p className="text-sm text-text-secondary font-medium">{item.text}</p>
                                     <hr className="flex-grow ml-5 h-0.5 bg-background-quaternary border-none"/>
                                 </div>
                             </div>
