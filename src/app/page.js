@@ -19,7 +19,8 @@ export default function Homepage() {
               <div className="main flex flex-col lg:flex-row lg:space-x-10">
                   <div className="w-full lg:w-1/2 2xl:w-8/12">
                       <Image
-                          src="/homepage-2.png"
+                          className={"rounded-[3vh]"}
+                          src={"/homepage/homepage-1.webp"}
                           alt="workers"
                           width={913}
                           height={607}
@@ -55,6 +56,8 @@ export default function Homepage() {
               text="Potřebujete rychle spolehlivý personál? Zajistíme snídaňové hostesky, debaras, obsluhu i recepci – zvládneme to i na poslední chvíli. Vyřešíme výpadky ve vašem týmu, seženeme kvalitní náhradu a ušetříme vám čas se zaškolováním. Zaměřte se na svůj byznys, my zajistíme zbytek."
               buttonText="Zjistit více o našich službách"
               link={"#formular-pro-klienty"}
+              imageFirst={"/homepage/homepage-2.webp"}
+              imageSecond={"/homepage/homepage-3.webp"}
           />
           <DoubleImageSection
               reverse
@@ -63,6 +66,8 @@ export default function Homepage() {
               text="Připojte se k Lifestore a otevřete si dveře do světa prestižních eventů! Nabízíme flexibilní pracovní směny, zaškolení, a na většině akcí poskytujeme i stravování. Staňte se součástí týmu, který realizuje nejvýznamnější akce v České republice a vyjíždí i na mezinárodní eventy. Začněte svou kariéru v event managementu s Lifestore ještě dnes!"
               buttonText="Přidejte se k našemu týmu"
               link={"brigadnici/#formular-pro-hostesky"}
+              imageFirst={"/homepage/homepage-4.webp"}
+              imageSecond={"/homepage/homepage-5.webp"}
           />
       </>
   );

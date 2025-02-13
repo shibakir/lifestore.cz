@@ -1,6 +1,5 @@
 import BulletListHomepage from "@/common/BulletList/BulletListHomepage";
 import HomepageHeroButton from "@/common/Buttons/HomepageHeroButton";
-import ActionButton from "@/common/Buttons/ActionButton";
 
 export default function HeroSectionHomepage() {
     return (
@@ -8,7 +7,7 @@ export default function HeroSectionHomepage() {
             className="bg-background-tertiary flex flex-col"
         >
             <div
-                className="h-[250px] lg:h-[40vw] xl:h-[35vw] bg-[url('/homepage-hero.png')] bg-cover bg-center
+                className="h-[220px] sm:h-[40vw] bg-[url('/homepage/hero.webp')] bg-cover bg-center
                             rounded-bl-[5vw] rounded-br-[5vw] relative">
                 <div className="main flex flex-row h-full">
                     <div className=" w-1/2 flex flex-col justify-center">

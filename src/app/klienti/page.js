@@ -10,8 +10,8 @@ export const generateMetadata = () => ({
 
 export default function Client() {
 
-    const firstImageSrc = "/homepage-small.png"
-    const secondImageSrc = "/homepage-small.png"
+    const firstImageSrc = "/clients/clients-1.webp"
+    const secondImageSrc = "/clients/clients-2.webp"
 
     const itemsFirst = [
         { id:1, title: "Eventové hostesky", text: "Perfektně připravené hostesky pro vaše firemní události, koncerty, road show a mnoho dalších příležitostí." },
@@ -45,6 +45,7 @@ export default function Client() {
                     buttonText={"Poptat brigádníky"}
                     link={"#formular-pro-klienty"}
                     variant={"clients"}
+                    image={"/clients/hero.webp"}
                 />
             </div>
             <div className="main">

@@ -2,7 +2,7 @@ import Image from "next/image";
 import TextSectionWithButton from "@/common/Sections/TextSectionWithButton";
 import clsx from "clsx";
 
-export default function DoubleImageSection({ reverse, title, text, buttonText, link="", className=""}) {
+export default function DoubleImageSection({ reverse, title, text, buttonText, link="", className="", imageFirst, imageSecond }) {
     return (
         <div
             className={clsx(className,
@@ -13,14 +13,16 @@ export default function DoubleImageSection({ reverse, title, text, buttonText, l
                 <div className="mt-10 w-full md:w-1/2 2xl:w-8/12">
                     <div className={`twoImagesParentContainer xl:space-x-5 ${reverse ? "md:justify-end" : "justify-start"}`}>
                         <Image
-                            src="/homepage/HP-fotka-05.webp"
+                            className={"rounded-[3vh]"}
+                            src={imageFirst}
                             alt="workers"
                             width={435}
                             height={513}
                             unoptimized
                         />
                         <Image
-                            src="/homepage/mary_briga_dni_ci_1.webp"
+                            className={"rounded-[3vh]"}
+                            src={imageSecond}
                             alt="workers"
                             width={435}
                             height={513}

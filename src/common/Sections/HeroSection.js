@@ -12,12 +12,12 @@ const variants = {
     },
 };
 
-export default function HeroSection({title, text, buttonText="", link="", variant }) {
+export default function HeroSection({ title, text, buttonText="", link="", variant, image }) {
 
     const { mainColor, textColor } = variants[variant] || variants.workers;
 
     return (
-        <div className={`w-full lg:min-h-[594] flex flex-col-reverse lg:flex-row justify-end ${mainColor}`}>
+        <div className={`w-full lg:min-h-[540] flex flex-col-reverse lg:flex-row justify-end ${mainColor}`}>
             <div className="lg:w-1/2 flex flex-row main lg:!main:hidden">
                 <div className="lg:w-1/6"/>
                 <div className="lg:w-5/6 flex flex-col justify-center items-start">
@@ -42,7 +42,10 @@ export default function HeroSection({title, text, buttonText="", link="", varian
                     </div>
                 </div>
             </div>
-            <div className="lg:w-1/2 min-h-[294] sm:min-h-[494] lg:min-h-0 bg-[url('/clients-hero.png')] bg-cover bg-center"/>
+            <div
+                className="lg:w-1/2 min-h-[294] sm:min-h-[494] lg:min-h-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${image})` }}
+            />
         </div>
     );
 }

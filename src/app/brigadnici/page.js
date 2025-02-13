@@ -10,7 +10,7 @@ export const generateMetadata = () => ({
 
 export default function Work() {
 
-    const firstImageSrc = "/homepage-small.png"
+    const firstImageSrc = "/workers/workers-1.webp"
 
     const itemsFirst = [
         { id:1, title: "Flexibilita", text: "Vyberte si směny podle svého školního rozvrhu nebo zaměstnání. U nás se pracuje podle vašich časových možností." },
@@ -35,6 +35,7 @@ export default function Work() {
                         "Garantujeme vám rychlost a kvalitu, aby se vaše pozornost mohla plně soustředit na" +
                         "rozvoj vašeho podnikání."}
                     variant={"workers"}
+                    image={"/workers/hero.webp"}
                 />
             </div>
             <div className="main">

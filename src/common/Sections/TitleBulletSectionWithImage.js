@@ -32,8 +32,11 @@ export default function TitleBulletSectionWithImage({ title, text="", items, ima
             </div>
             {imageSrc &&
                 <div
-                    className="lg:w-3/12 2xl:ml-20 2xl:mr-20 bg-cover bg-center rounded-b-[2vw] rounded-t-[2vw]"
-                    style={{backgroundImage: `url(${imageSrc})`}}
+                    className="lg:w-3/12 2xl:h-[500px] 2xl:ml-20 2xl:mr-20 rounded-b-[2vw] rounded-t-[2vw]"
+                    style={{backgroundImage: `url(${imageSrc})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover'
+                    }}
                 />
             }
 

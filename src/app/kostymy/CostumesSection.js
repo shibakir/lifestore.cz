@@ -114,7 +114,7 @@ export default function CostumesSection() {
                 }
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 xl:gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5 xl:gap-10">
                 {
                     controlButtons[category].items.slice(0, visibleCount).map((item, index) => (
                         <div
@@ -126,7 +126,7 @@ export default function CostumesSection() {
                             }}
                         >
                             <div
-                                className="w-full max-h-[250px] xl:max-h-[400px] overflow-hidden relative object-cover">
+                                className="w-full max-h-[300px] sm:max-h-[400px] overflow-hidden relative object-cover">
                                 <img
                                     loading="lazy"
                                     className="rounded-[2vh]"
@@ -135,7 +135,7 @@ export default function CostumesSection() {
                                 />
                             </div>
                             <div className="p-4 rounded-bl-[2vh] rounded-br-[2vh] bg-background-secondary">
-                                <div className="w-2/3 lg:w-1/2 flex flex-row items-center justify-between">
+                                <div className="w-2/3 lg:w-10/12 2xl:w-1/2 flex flex-row items-center justify-between">
                                     <p className="text-sm text-text-secondary font-medium">{item.text}</p>
                                     <hr className="flex-grow ml-5 h-0.5 bg-background-quaternary border-none"/>
                                 </div>

@@ -20,7 +20,7 @@ function SingleContact({ name, text, image }) {
     return (
         <div className="flex flex-col items-center text-center">
             <Image
-                className="rounded-lg object-cover"
+                className="rounded-[2vh] object-cover object-center w-[265] h-[354]"
                 src={image}
                 alt={name}
                 width={265}
@@ -39,11 +39,11 @@ function SingleContact({ name, text, image }) {
 
 export default function ContactsClient() {
     const people = [
-        { id: 1, name: "Marika Pušová", image: "/Contacts_sample.png", title: "Jednatelka společnosti" },
-        { id: 2, name: "Michaela Šprynarová", image: "/Contacts_sample.png", title: "Zástupce jednatelky" },
-        { id: 3, name: "Viktorie Rakušanová", image: "/Contacts_sample.png", title: "Senior event manager" },
-        { id: 4, name: "Ondřej Laibl", image: "/Contacts_sample.png", title: "Event manager" },
-        { id: 5, name: "Jiří Komínke", image: "/Contacts_sample.png", title: "Event manager" },
+        { id: 1, name: "Marika Pušová", image: "/contacts/01.webp", title: "Jednatelka společnosti" },
+        { id: 2, name: "Michaela Šprynarová", image: "/contacts/02.webp", title: "Zástupce jednatelky" },
+        { id: 3, name: "Viktorie Rakušanová", image: "/contacts/03.webp", title: "Senior event manager" },
+        { id: 4, name: "Ondřej Laibl", image: "/contacts/04.webp", title: "Event manager" },
+        { id: 5, name: "Jiří Komínke", image: "/contacts/05.webp", title: "Event manager" },
     ];
 
     const [visibleCount, setVisibleCount] = useState(people.length);
@@ -81,16 +81,22 @@ export default function ContactsClient() {
                 />
                 <hr className="flex-grow ml-5 lg:ml-8 h-0.5 sm:h-1 bg-background-quaternary border-none"/>
             </div>
-            <div
-                className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center lg:justify-items-start">
-                {people.slice(0, visibleCount).map((item) => (
-                    <SingleContact
-                        key={item.id}
-                        name={item.name}
-                        text={item.title}
-                        image={item.image}
-                    />
-                ))}
+            <div className="max-w-full lg:max-w-[80%] 2xl:max-w-[70%]">
+                <div
+                    className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center lg:justify-items-start">
+                    {people.slice(0, visibleCount).map((item) => (
+                       <div
+                           key={item.id}
+                       >
+                            <SingleContact
+
+                                name={item.name}
+                                text={item.title}
+                                image={item.image}
+                            />
+                       </div>
+                    ))}
+                </div>
             </div>
             {isMobile && visibleCount < people.length && (
                 <div className="mt-8 flex justify-center">

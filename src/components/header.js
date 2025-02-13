@@ -8,8 +8,9 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import MobileMenu from "@/common/Menu/MobileMenu";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 
 export default function Header() {
 
@@ -79,14 +80,31 @@ export default function Header() {
                     </Link>
                 </div>
                 <div className="w-5/12 space-x-5 flex items-center justify-end">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram}
-                                         className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebookF}
-                                         className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
-                    </a>
+                    <span id={1}>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faInstagram}
+                                             className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
+                        </a>
+                    </span>
+                    <span id={2}>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faFacebookF}
+                                             className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
+                        </a>
+                    </span>
+                    <span id={3} className="hidden lg:block">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedinIn}
+                                             className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
+                        </a>
+                    </span>
+                    <span id={4} className="hidden lg:block">
+                        <a className="hidden lg:block" href="https://linkedin.com" target="_blank"
+                           rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faTiktok}
+                                             className="text-xl text-text-secondary transition-transform duration-200 hover:scale-125 hover:text-text-tertiary"/>
+                        </a>
+                    </span>
                 </div>
             </div>
         </header>
