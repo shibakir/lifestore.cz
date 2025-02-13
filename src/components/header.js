@@ -20,7 +20,7 @@ export default function Header() {
     return (
         <header className="bg-background-secondary fixed top-0 left-0 w-full z-50 shadow-md h-[70px] flex items-center">
             <div className="main flex row pt-4 pb-4">
-                <div className="hidden 2xl:flex w-5/12 justify-start items-center">
+                <div className="hidden 2xl:flex w-6/12 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
                         <NavLink
                             key={1}
@@ -69,7 +69,7 @@ export default function Header() {
                 <div className="w-5/12 2xl:hidden flex">
                     <MobileMenu pathname={pathname}/>
                 </div>
-                <div className="w-2/12 flex justify-center items-center">
+                <div className="w-2/12 2xl:w-1/12 flex justify-center items-center">
                     <Link href="/">
                         <Image
                             src="website/lifestore-favicon.svg"
