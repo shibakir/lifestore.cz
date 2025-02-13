@@ -2,6 +2,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {facebookLink, instagramLink, linkedinLink, tiktokLink} from "@/constants/links";
 import {FooterFormClients} from "@/common/Forms/FooterFormClients";
 import Button from "@/common/Buttons/Button";
 import Title from "@/common/Title";
@@ -51,11 +52,6 @@ const variants = {
         buttonTextColor: "text-text-primary"
     },
 };
-
-const instagramLink = "https://www.instagram.com";
-const facebookLink = "https://www.facebook.com";
-const linkedinLink = "https://www.linkedin.com";
-const tiktokLink = "https://www.tiktok.com";
 
 export default function Footer({ pathname }) {
 
