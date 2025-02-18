@@ -297,7 +297,7 @@ export default function Footer({ pathname }) {
                         }
                     </div>
                     <div className=" lg:w-5/12 flex flex-nowrap lg:hidden md:items-start lg:items-center 2xl:items-end">
-                        <div className="mt-5 lg:mt-0 flex flex-row place-items-end md:place-items-center justify-between w-full">
+                        <div className="mt-5 lg:mt-0 flex flex-row place-items-end justify-between w-full">
                             {(variant === "clients-dark") &&
                                 <Link href="/">
                                     <Image src="website/lifestore-logo-white.svg" alt="Logo" width={80} height={45}/>
@@ -309,7 +309,7 @@ export default function Footer({ pathname }) {
                                 </Link>
                             }
                             <Text
-                                className={`${textColorPrimary} text-[9px] lg:text-sm leading-tight`}
+                                className={`${textColorPrimary} text-[9px] lg:text-sm leading-tight pb-[1px]`}
                                 text={
                                     "LifeStore s.r.o. | IČO: 24123820\n"
                                     + "Jana Přibíka 953/15, 190 00 Praha\n"
