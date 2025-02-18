@@ -269,7 +269,7 @@ export default function Footer({ pathname }) {
                                         </Link>
                                     }
                                     <Text
-                                        className={`${textColorPrimary} tracking-tight text-[10px] lg:text-xs 3xl:text-lg`}
+                                        className={`${textColorPrimary} tracking-tight text-[10px] lg:text-xs 3xl:text-lg 2xl:mb-[-4px]`}
                                         text={
                                             "LifeStore s.r.o.\n"
                                             + "IČO: 24123820\n"
