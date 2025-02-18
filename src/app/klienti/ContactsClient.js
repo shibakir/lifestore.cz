@@ -43,7 +43,7 @@ export default function ContactsClient() {
         { id: 2, name: "Michaela Šprynarová", image: "/contacts/02.webp", title: "Zástupce jednatelky" },
         { id: 3, name: "Viktorie Rakušanová", image: "/contacts/03.webp", title: "Senior event manager" },
         { id: 4, name: "Ondřej Laibl", image: "/contacts/04.webp", title: "Event manager" },
-        { id: 5, name: "Jiří Komínke", image: "/contacts/05.webp", title: "Event manager" },
+        { id: 5, name: "Jiří Komínek", image: "/contacts/05.webp", title: "Event manager" },
     ];
 
     const [visibleCount, setVisibleCount] = useState(people.length);
