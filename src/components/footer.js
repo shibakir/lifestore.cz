@@ -108,14 +108,8 @@ export default function Footer({ pathname }) {
                                     <div className="space-y-2 xl:space-y-5">
                                         <div className="space-y-2 xl:space-y-5">
                                             <Button
-                                                text="+420 773 530 000"
-                                                link="tel:+420773530000"
-                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
-                                                variant={"dark"}
-                                            />
-                                            <Button
-                                                text="marika.pusova@lifestore.cz"
-                                                link="mailto:marika.pusova@lifestore.cz"
+                                                text="info@lifestore.cz"
+                                                link="mailto:info@lifestore.cz"
                                                 className={`font-normal text-sm xl:text-lg p-6`}
                                                 variant={"dark"}
                                             />
@@ -159,14 +153,8 @@ export default function Footer({ pathname }) {
                                     <div className="space-y-2 xl:space-y-5">
                                         <div className="space-y-2 xl:space-y-5">
                                             <Button
-                                                text="+420 773 530 000"
-                                                link="tel:+420773530000"
-                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
-                                                variant={"light-green"}
-                                            />
-                                            <Button
-                                                text="marika.pusova@lifestore.cz"
-                                                link="mailto:marika.pusova@lifestore.cz"
+                                                text="info@lifestore.cz"
+                                                link="mailto:info@lifestore.cz"
                                                 className={`font-normal text-sm xl:text-lg p-6`}
                                                 variant={"light-green"}
                                             />
@@ -210,14 +198,8 @@ export default function Footer({ pathname }) {
                                     <div className="space-y-2 xl:space-y-5">
                                         <div className="space-y-2 xl:space-y-5">
                                             <Button
-                                                text="+420 773 530 000"
-                                                link="tel:+420773530000"
-                                                className={`mr-2 xl:mr-5 font-normal text-sm xl:text-lg p-6`}
-                                                variant={"light"}
-                                            />
-                                            <Button
-                                                text="marika.pusova@lifestore.cz"
-                                                link="mailto:marika.pusova@lifestore.cz"
+                                                text="info@lifestore.cz"
+                                                link="mailto:info@lifestore.cz"
                                                 className={`font-normal text-sm xl:text-lg p-6`}
                                                 variant={"light"}
                                             />
