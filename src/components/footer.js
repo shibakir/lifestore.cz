@@ -90,7 +90,7 @@ export default function Footer({ pathname }) {
                 <div className="main flex flex-col lg:flex-row lg:space-x-5">
                     <div className="w-full lg:w-6/12 2xl:w-1/3 max-w-[520px]">
                         <div className="min-h-full flex flex-col justify-between gap-4">
-                            <div className="w-full lg:w-3/4">
+                            <div>
                                 <Title
                                     className={`${textColorPrimary} xl:min-w-[700px] mb-3 text-xl font-normal leading-tight`}
                                     title={"Začněte plánovat svou akci s námi!"}
