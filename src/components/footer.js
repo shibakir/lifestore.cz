@@ -309,7 +309,7 @@ export default function Footer({ pathname }) {
                                 </Link>
                             }
                             <Text
-                                className={`${textColorPrimary} text-[9px] lg:text-sm leading-tight pb-[1px]`}
+                                className={`${textColorPrimary} text-[9px] lg:text-sm leading-tight mb-[-4px]`}
                                 text={
                                     "LifeStore s.r.o. | IČO: 24123820\n"
                                     + "Jana Přibíka 953/15, 190 00 Praha\n"
