@@ -46,14 +46,13 @@ export default function GalleryCarousel({ images, initialIndex = 0, isCarouselOp
                     className="fixed inset-0 w-full h-full bg-gray-900 bg-opacity-50 backdrop-blur-xl flex items-center justify-center z-50"
                     onClick={closeCarousel}
                 >
+                    <button onClick={closeCarousel} className="absolute top-3 right-3 text-text-primary">
+                        <X size={40}/>
+                    </button>
                     <div
-                        className="w-[90%] h-[80%] lg:w-[80%] lg:h-[80%] flex flex-col items-center justify-center relative p-4"
+                        className="w-[90%] h-[90%] lg:w-[80%] lg:h-[80%] flex flex-col items-center justify-center relative p-4"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <button onClick={closeCarousel} className="absolute top-3 right-3 text-text-primary">
-                            <X size={40}/>
-                        </button>
-
                         <button onClick={prevImage}
                                 className="absolute left-3 top-1/2 transform -translate-y-1/2 text-text-primary lg:block hidden">
                             <ChevronLeft size={70}/>
@@ -74,8 +73,7 @@ export default function GalleryCarousel({ images, initialIndex = 0, isCarouselOp
                                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-text-primary lg:block hidden">
                             <ChevronRight size={70}/>
                         </button>
-
-                        <div className="lg:hidden absolute bottom-3 left-0 w-full flex justify-center gap-x-20">
+                        <div className="lg:hidden absolute inset-x-0 bottom-0 w-full flex justify-center gap-x-20">
                             <button onClick={prevImage} className="text-text-primary">
                                 <ChevronLeft size={60}/>
                             </button>
