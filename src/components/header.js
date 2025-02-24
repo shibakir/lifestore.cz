@@ -20,7 +20,7 @@ export default function Header() {
     return (
         <header className="bg-background-secondary sticky top-0 w-full z-50 shadow-md min-h-[70px] flex items-center">
             <div className="main flex row pt-4 pb-4">
-                <div className="hidden 2xl:flex basis-5/12 justify-start items-center">
+                <div className="hidden 3xl:flex basis-5/12 justify-start items-center">
                     <nav className="space-x-1 2xl:space-x-2">
                         <NavLink
                             key={1}
@@ -66,7 +66,7 @@ export default function Header() {
                         </NavLink>
                     </nav>
                 </div>
-                <div className="basis-5/12 2xl:hidden flex">
+                <div className="basis-5/12 3xl:hidden flex">
                     <MobileMenu pathname={pathname}/>
                 </div>
                 <div className="basis-2/12 flex justify-center items-center">
