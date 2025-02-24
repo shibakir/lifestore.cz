@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <html lang="cs">
         <body className={`layout ${montserrat.className}`}>
         <Header/>
-        <main className="content pt-[70px]">
+        <main className="content">
             {children}
         </main>
         <Footer pathname={pathname}/>
