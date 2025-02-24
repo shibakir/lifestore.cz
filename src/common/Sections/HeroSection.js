@@ -17,7 +17,7 @@ export default function HeroSection({ title, text, buttonText="", link="", varia
     const { mainColor, textColor } = variants[variant] || variants.workers;
 
     return (
-        <div className={`w-full lg:min-h-[540] flex flex-col-reverse lg:flex-row justify-end ${mainColor}`}>
+        <div className={`w-full lg:min-h-[540px] flex flex-col-reverse lg:flex-row justify-end ${mainColor}`}>
             <div className="lg:w-1/2 flex flex-row main lg:!main:hidden">
                 <div className="lg:w-1/6"/>
                 <div className="lg:w-5/6 flex flex-col justify-center items-start">
