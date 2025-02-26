@@ -9,7 +9,7 @@ export const generateMetadata = () => ({
 export default function NotFound() {
 
     return (
-        <div className="main mt-16 xl:mt-36 xl:mb-36 text-center">
+        <div className="min-h-screen main mt-16 xl:mt-36 xl:mb-36 text-center">
             <Title className="text-text-secondary" title={metadata.nodata.title}/>
             <Title className="text-text-secondary" title={metadata.nodata.description}/>
         </div>
