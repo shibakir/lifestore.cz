@@ -114,7 +114,7 @@ export default function Docs() {
         console.log(typeof sigCanvas.current.toDataURL("image/png"));
 
         try {
-            const signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
+            const signatureImage = sigCanvas.current.getCanvas().toDataURL("image/png");
             modifyPdf(formData.firstName, formData.secondName, formData.id, signatureImage).then(r => {});
 
         } catch (error) {
