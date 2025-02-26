@@ -113,14 +113,9 @@ export default function Docs() {
             return;
         }
 
-        trim();
-
-        console.log(sigCanvas.current.getCanvas(), "trimmedCanvas")
-        console.log(sigCanvas.current.getTrimmedCanvas().toDataURL(), "trimmedCanvas Data URL")
-
         try {
-            const signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
-            modifyPdf(formData.firstName, formData.secondName, formData.id, signatureImage).then(r => {});
+            //const signatureImage = ;
+            modifyPdf(formData.firstName, formData.secondName, formData.id, sigCanvas.current.getTrimmedCanvas().toDataURL("image/png")).then(r => {});
 
         } catch (error) {
             console.error("Chyba při získávání podpisu:", error);
@@ -128,18 +123,12 @@ export default function Docs() {
         }
     }
 
-    /* SIGNATURE */
+    /* SIGN */
     const sigCanvas = useRef(null)
-    const [trimmedDataURL, setTrimmedDataURL] = useState(null)
     function clear() {
         sigCanvas.current.clear()
-    }
-    function trim() {
-        setTrimmedDataURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
 
-        console.log(trimmedDataURL);
-    }
-    /* SIGNATURE */
+    /* SIGN */
 
     return (
         <div className="mt-10 mb-10 lg:mt-20 lg:mb-20 min-h-[50%] p-10">
@@ -195,7 +184,7 @@ export default function Docs() {
                                 <SignatureCanvas
                                     ref={sigCanvas}
                                     canvasProps={{
-                                        className: "sm:w-[250px] h-[100px] bg-background-secondary rounded-[2vh]"
+                                        className: "sm:w-[300px] h-[150px] bg-background-secondary rounded-[2vh]"
                                     }}
                                 />
                                 <div>
