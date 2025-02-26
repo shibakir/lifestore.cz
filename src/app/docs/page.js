@@ -72,11 +72,14 @@ async function modifyPdf(name, surname, id, signatureImage) {
 
     const pdfBytes = await pdfDoc.save()
 
-    let blob = new Blob([pdfBytes], {type: "application/pdf"});
-    let link = document.createElement("a");
-    link.href = window.URL.createObjectURL(blob);
+    const blob = new Blob([pdfBytes], {type: "application/pdf"});
+    const link = document.createElement("a");
+    //link.href = window.URL.createObjectURL(blob);
+    link.href = URL.createObjectURL(blob);
     link.download = "vase_podepsane_ruzove_prohlaseni.pdf";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
 }
 
 export default function Docs() {
