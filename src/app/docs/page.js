@@ -103,19 +103,18 @@ export default function Docs() {
             return;
         }
 
-        if (!sigCanvas.current) {
-            alert("Chyba: Podpis nebyl správně inicializován.");
-            return;
-        }
-
         if (sigCanvas.current.isEmpty()) {
             alert("Přidejte podpis před odesláním!");
             return;
         }
 
+        console.log(typeof sigCanvas.current.getTrimmedCanvas());
+        console.log(typeof sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+        console.log(typeof sigCanvas.current.toDataURL("image/png"));
+
         try {
-            //const signatureImage = ;
-            modifyPdf(formData.firstName, formData.secondName, formData.id, sigCanvas.current.getTrimmedCanvas().toDataURL("image/png")).then(r => {});
+            const signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
+            modifyPdf(formData.firstName, formData.secondName, formData.id, signatureImage).then(r => {});
 
         } catch (error) {
             console.error("Chyba při získávání podpisu:", error);
