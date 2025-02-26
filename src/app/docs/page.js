@@ -118,7 +118,7 @@ export default function Docs() {
     /* SIGNATURE */
 
     const [imageURL, setImageURL] = useState(null);
-    const sigCanvas = useRef({});
+    const sigCanvas = useRef(null);
 
     const clear = () => sigCanvas.current.clear();
     //const save = () => setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
