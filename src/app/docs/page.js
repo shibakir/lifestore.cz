@@ -108,8 +108,9 @@ export default function Docs() {
             return;
         }
 
-        console.log(typeof sigCanvas.current.getTrimmedCanvas());
-        console.log(typeof sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+        console.log(typeof sigCanvas.current);
+        console.log(typeof sigCanvas.current.getCanvas());
+        console.log(typeof sigCanvas.current.getCanvas().toDataURL("image/png"));
         console.log(typeof sigCanvas.current.toDataURL("image/png"));
 
         try {
@@ -181,7 +182,11 @@ export default function Docs() {
                             <label htmlFor="sign">Podpis</label>
                             <div className="flex flex-col">
                                 <SignatureCanvas
-                                    ref={sigCanvas}
+                                    ref={(ref) => {
+                                        console.log("SignatureCanvas ref:", ref);
+                                        sigCanvas.current = ref;
+                                    }}
+                                    //ref={sigCanvas}
                                     canvasProps={{
                                         className: "sm:w-[300px] h-[150px] bg-background-secondary rounded-[2vh]"
                                     }}
