@@ -113,7 +113,8 @@ export default function Docs() {
             return;
         }
 
-        console.log(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"))
+        console.log(sigCanvas.current.getTrimmedCanvas(), "trimmedCanvas")
+        console.log(sigCanvas.current.getTrimmedCanvas().toDataURL(), "trimmedCanvas Data URL")
 
         try {
             const signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
