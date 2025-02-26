@@ -31,8 +31,6 @@ async function modifyPdf(name, surname, id, signatureImage) {
     const firstPage = pages[0]
     const { width, height } = firstPage.getSize()
 
-    console.log(width, height)
-
     firstPage.drawText(name, {
         x: width/2-30,
         y: 841-195,
@@ -101,20 +99,28 @@ export default function Docs() {
         event.preventDefault();
 
         if (!formData.firstName || !formData.secondName || !formData.id) {
-            alert("Kazda polozka je povina!");
+            alert("Kazda polozka je povinna!");
+            return;
+        }
+
+        if (!sigCanvas.current) {
+            alert("Chyba: Podpis nebyl správně inicializován.");
             return;
         }
 
         if (sigCanvas.current.isEmpty()) {
-            alert("Chybi podpis!");
+            alert("Přidejte podpis před odesláním!");
             return;
         }
 
-        //const signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
-        save();
+        try {
+            const signatureImage = sigCanvas.current.getTrimmedCanvas().toDataURL("image/png");
+            modifyPdf(formData.firstName, formData.secondName, formData.id, signatureImage).then(r => {});
 
-        modifyPdf(formData.firstName, formData.secondName, formData.id, canvasDataURL);
-        console.log("Form submitted:", formData);
+        } catch (error) {
+            console.error("Chyba při získávání podpisu:", error);
+            alert("Nastala chyba při získávání podpisu. Zkuste to znovu.");
+        }
     }
 
     /* SIGNATURE */
