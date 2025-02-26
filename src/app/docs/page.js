@@ -188,7 +188,7 @@ export default function Docs() {
                                     >
                                         Smazat podpis
                                     </button>
-                                    <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={clear}
+                                    <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={save}
                                             type="button"
                                     >
                                         Ulozit podpis
