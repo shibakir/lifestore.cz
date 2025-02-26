@@ -113,7 +113,9 @@ export default function Docs() {
             return;
         }
 
-        console.log(sigCanvas.current.getTrimmedCanvas(), "trimmedCanvas")
+        trim();
+
+        console.log(sigCanvas.current.getCanvas(), "trimmedCanvas")
         console.log(sigCanvas.current.getTrimmedCanvas().toDataURL(), "trimmedCanvas Data URL")
 
         try {
@@ -128,7 +130,15 @@ export default function Docs() {
 
     /* SIGNATURE */
     const sigCanvas = useRef(null)
-    const clear = () => sigCanvas.current.clear();
+    const [trimmedDataURL, setTrimmedDataURL] = useState(null)
+    function clear() {
+        sigCanvas.current.clear()
+    }
+    function trim() {
+        setTrimmedDataURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
+
+        console.log(trimmedDataURL);
+    }
     /* SIGNATURE */
 
     return (
@@ -184,9 +194,9 @@ export default function Docs() {
                             <div className="flex flex-col">
                                 <SignatureCanvas
                                     ref={sigCanvas}
-                                    //canvasProps={{
-                                        //className: "sm:w-[250px] h-[100px] bg-background-secondary rounded-[2vh]"
-                                    //}}
+                                    canvasProps={{
+                                        className: "sm:w-[250px] h-[100px] bg-background-secondary rounded-[2vh]"
+                                    }}
                                 />
                                 <div>
                                     <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={clear}
