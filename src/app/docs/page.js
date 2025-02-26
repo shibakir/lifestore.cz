@@ -127,7 +127,7 @@ export default function Docs() {
     const sigCanvas = useRef(null)
     function clear() {
         sigCanvas.current.clear()
-
+    }
     /* SIGN */
 
     return (
