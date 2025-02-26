@@ -121,7 +121,7 @@ export default function Docs() {
     const sigCanvas = useRef(null);
 
     const clear = () => sigCanvas.current.clear();
-    //const save = () => setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
+    const save = () => setImageURL(sigCanvas.current.getTrimmedCanvas().toDataURL("image/png"));
 
     /* SIGNATURE */
 
@@ -183,9 +183,15 @@ export default function Docs() {
                                     }}
                                 />
                                 <div>
-                                    <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={clear} type="button"
-                                            >
+                                    <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={clear}
+                                            type="button"
+                                    >
                                         Smazat podpis
+                                    </button>
+                                    <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={clear}
+                                            type="button"
+                                    >
+                                        Ulozit podpis
                                     </button>
                                 </div>
                             </div>
