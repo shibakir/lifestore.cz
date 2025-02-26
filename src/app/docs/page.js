@@ -102,25 +102,13 @@ export default function Docs() {
             alert("Kazda polozka je povinna!");
             return;
         }
-
         if (sigCanvas.current.isEmpty()) {
             alert("Přidejte podpis před odesláním!");
             return;
         }
 
-        console.log(typeof sigCanvas.current);
-        console.log(typeof sigCanvas.current.getCanvas());
-        console.log(typeof sigCanvas.current.getCanvas().toDataURL("image/png"));
-        console.log(typeof sigCanvas.current.toDataURL("image/png"));
-
-        try {
-            const signatureImage = sigCanvas.current.getCanvas().toDataURL("image/png");
-            modifyPdf(formData.firstName, formData.secondName, formData.id, signatureImage).then(r => {});
-
-        } catch (error) {
-            console.error("Chyba při získávání podpisu:", error);
-            alert("Nastala chyba při získávání podpisu. Zkuste to znovu.");
-        }
+        const signatureImage = sigCanvas.current.getCanvas().toDataURL("image/png");
+        modifyPdf(formData.firstName, formData.secondName, formData.id, signatureImage).then(r => {});
     }
 
     /* SIGN */
@@ -182,11 +170,7 @@ export default function Docs() {
                             <label htmlFor="sign">Podpis</label>
                             <div className="flex flex-col">
                                 <SignatureCanvas
-                                    ref={(ref) => {
-                                        console.log("SignatureCanvas ref:", ref);
-                                        sigCanvas.current = ref;
-                                    }}
-                                    //ref={sigCanvas}
+                                    ref={sigCanvas}
                                     canvasProps={{
                                         className: "sm:w-[300px] h-[150px] bg-background-secondary rounded-[2vh]"
                                     }}
