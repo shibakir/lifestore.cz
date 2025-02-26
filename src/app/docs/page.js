@@ -2,7 +2,7 @@
 
 import {useRef, useState} from "react";
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-import { SignatureCanvas } from "react-signature-canvas";
+import SignatureCanvas from "react-signature-canvas";
 
 const doc_link = '/pdf/prohlaseni.pdf'
 
@@ -127,13 +127,8 @@ export default function Docs() {
     }
 
     /* SIGNATURE */
-
-    const sigCanvas = useRef(null);
-    const [canvasDataURL, setCanvasDataURL] = useState(null)
-
+    const sigCanvas = useRef(null)
     const clear = () => sigCanvas.current.clear();
-    const save = () => setCanvasDataURL(sigCanvas.current.getTrimmedCanvas().toDataURL('image/png'))
-
     /* SIGNATURE */
 
     return (
@@ -189,9 +184,9 @@ export default function Docs() {
                             <div className="flex flex-col">
                                 <SignatureCanvas
                                     ref={sigCanvas}
-                                    canvasProps={{
-                                        className: "signatureCanvas sm:w-[250px] h-[100px] bg-background-secondary rounded-[2vh]"
-                                    }}
+                                    //canvasProps={{
+                                        //className: "sm:w-[250px] h-[100px] bg-background-secondary rounded-[2vh]"
+                                    //}}
                                 />
                                 <div>
                                     <button className="mt-2 p-2 bg-button-button-4 rounded-[2vh]" onClick={clear}
