@@ -2,7 +2,7 @@
 
 import {useRef, useState} from "react";
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-import SignaturePad from "react-signature-canvas";
+import { SignatureCanvas } from "react-signature-canvas";
 
 const doc_link = '/pdf/prohlaseni.pdf'
 
@@ -176,7 +176,7 @@ export default function Docs() {
                         <div className="flex flex-col justify-between">
                             <label htmlFor="sign">Podpis</label>
                             <div className="flex flex-col">
-                                <SignaturePad
+                                <SignatureCanvas
                                     ref={sigCanvas}
                                     canvasProps={{
                                         className: "signatureCanvas sm:w-[250px] h-[100px] bg-background-secondary rounded-[2vh]"
