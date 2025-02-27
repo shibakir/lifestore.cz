@@ -3,6 +3,7 @@
 import "./globals.css";
 import { Montserrat } from 'next/font/google';
 import {usePathname} from "next/navigation";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <main className="content">
             {children}
         </main>
+        <SpeedInsights/>
         <Footer pathname={pathname}/>
         </body>
         </html>
