@@ -7,6 +7,7 @@ import SignatureCanvas from "react-signature-canvas";
 
 import { Checkbox } from "@/components/ui/checkbox"
 import { Button } from "@/components/ui/button"
+import { Progress } from "@/components/ui/progress"
 import {
     Form,
     FormControl,
@@ -23,7 +24,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
-import {useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import {formSchema} from "@/schemas/documentsSchema";
 import {ReCAPTCHA} from "react-google-recaptcha";
@@ -55,14 +56,19 @@ export function DocumentsForm() {
     const form = useForm({
         resolver: zodResolver(formSchema),
         defaultValues,
-    })
+    });
 
     function onSubmit(values) {
-
+        if (isBlocked) {
+            alert(`Formulář můžete odeslat za ${timeLeft} sekund.`);
+            return;
+        }
         if (sigCanvas.current.isEmpty()) {
             alert("Přidejte podpis před odesláním!");
             return;
         }
+
+        console.log(values);
 
         // generate pdf
         if (optionalFormIsChecked) {
@@ -74,7 +80,22 @@ export function DocumentsForm() {
         // TODO api call: send data to Google Disk folders using Make
         // TODO api call: send data to Excel table Google Disk using Make
 
-        console.log(values)
+        /* blocking time */
+        localStorage.setItem("lastSubmitTime", Date.now().toString());
+        setIsBlocked(true);
+        setTimeLeft(600);
+        updateProgress(600000);
+
+        const interval = setInterval(() => {
+            setTimeLeft(prev => {
+                if (prev <= 1) {
+                    setIsBlocked(false);
+                    clearInterval(interval);
+                    return 0;
+                }
+                return prev - 1;
+            });
+        }, 1000);
     }
 
     const sigCanvas = useRef(null)
@@ -83,6 +104,48 @@ export function DocumentsForm() {
     }
 
     const [optionalFormIsChecked, setOptionalFormIsChecked] = useState(false);
+
+    const [isBlocked, setIsBlocked] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(0);
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+        const lastSubmitTime = localStorage.getItem("lastSubmitTime");
+        if (lastSubmitTime) {
+            const elapsedTime = Date.now() - parseInt(lastSubmitTime, 10);
+            const remainingTime = 600000 - elapsedTime;
+            if (remainingTime > 0) {
+                setIsBlocked(true);
+                setTimeLeft(Math.ceil(remainingTime / 1000));
+                updateProgress(remainingTime);
+                const interval = setInterval(() => {
+                    setTimeLeft(prev => {
+                        if (prev <= 1) {
+                            setIsBlocked(false);
+                            clearInterval(interval);
+                            return 0;
+                        }
+                        return prev - 1;
+                    });
+                }, 1000);
+            }
+        }
+    }, []);
+
+    function updateProgress(remainingTime) {
+        const initialProgress = (remainingTime / 600000) * 100;
+        setProgress(initialProgress);
+
+        const interval = setInterval(() => {
+            setProgress(prev => {
+                if (prev <= 0) {
+                    clearInterval(interval);
+                    return 0;
+                }
+                return prev - (100 / 600);
+            });
+        }, 1000);
+    }
 
     return (
         <div className="!mt-10">
@@ -457,7 +520,16 @@ export function DocumentsForm() {
                      </div>
 
                      <div className="pt-[40px]">
+                         {isBlocked && (
+                             <div className="mt-5 mb-5">
+                                 <p className="text-sm text-gray-500">
+                                     Před opětovným odesláním počkejte {timeLeft} sekund.
+                                 </p>
+                                 <Progress value={progress} className="bg-button-button-2 mt-2"/>
+                             </div>
+                         )}
                          <Button
+                             disabled={isBlocked}
                              className="bg-button-button-3 hover:bg-button-button-1 text-text-primary hover:text-text-primary"
                              type="submit">Odeslat dokument</Button>
                      </div>
