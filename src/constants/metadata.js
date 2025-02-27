@@ -24,8 +24,12 @@ export const metadata = {
         title: "Lifestore s.r.o - Kontakty",
         description: "Kontaktujte nás pro více informací o našich službách a produktech. Těšíme se na vaše dotazy!",
     },
+    documents: {
+        title: "Lifestore s.r.o - dokumenty",
+        description: "Podepisování dokumentů",
+    },
     nodata: {
         title: "404 - Stránka nebyla nalezena",
         description: "Omlouváme se, ale stránka, kterou hledáte, neexistuje.",
-    }
+    },
 };
