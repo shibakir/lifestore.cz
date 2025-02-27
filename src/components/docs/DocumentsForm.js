@@ -26,6 +26,8 @@ import { Input } from "@/components/ui/input"
 import {useRef, useState} from "react";
 
 import {formSchema} from "@/schemas/documentsSchema";
+import {ReCAPTCHA} from "react-google-recaptcha";
+import {recaptcha} from "@/constants/constants";
 
 export function DocumentsForm() {
 
@@ -102,6 +104,7 @@ export function DocumentsForm() {
                     </p>
                 </div>
             </div>
+            <ReCAPTCHA sitekey={recaptcha}>
              <Form {...form}>
                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                      <div>
@@ -460,6 +463,7 @@ export function DocumentsForm() {
                      </div>
                  </form>
              </Form>
+            </ReCAPTCHA>
         </div>
     )
 }
