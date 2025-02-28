@@ -162,8 +162,9 @@ export function DocumentsForm() {
                     >
                         Chci podepsat růžové prohlášení
                     </label>
-                    <p className="text-sm text-muted-foreground">
-                        Spolu se smlouvou současně podepisujete i růžové prohlášení.
+                    <p className="text-sm leading-tight text-muted-foreground">
+                        Spolu se smlouvou současně podepisujete i růžové prohlášení <span className="m-0 p-0 hidden sm:contents"><br/></span>
+                        (<span className="font-semibold">Prohlášení poplatníka daně z příjmu FO ze závislé činnosti</span>)
                     </p>
                 </div>
             </div>
