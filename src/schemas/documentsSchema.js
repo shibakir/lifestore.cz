@@ -16,7 +16,8 @@ export const formSchema = z.object({
     accountPrefix: z.string().regex(/^\d{2,}$/, { message: "Předčíslí účtu musí mít alespoň 2 číslice." }),
     accountNumber: z.string().regex(/^\d{2,}$/, { message: "Číslo účtu musí mít alespoň 2 číslice." }),
     bankCode: z.string().regex(/^\d{4}$/, { message: "Kód banky musí mít 4 číslice." }),
-    permanentResidence: z.string().min(5, { message: "Trvalé bydliště musí být alespoň 5 znaků dlouhé." }),
+    permanentResidence: z.string().min(5, { message: "Trvalé bydliště musí být alespoň 5 znaků dlouhé." })
+        .max(50, { message: "Trvalé bydliště nesmí být delší než 60 znaků." }),
     city: z.string().min(2, { message: "Město musí mít alespoň 2 znaky." }),
     postCode: z.string().regex(/^\d{3} ?\d{2}$/, { message: "PSČ musí mít formát 12345 nebo 123 45." }),
     phone: z.string().regex(/^\+?\d{9,15}$/, { message: "Neplatné telefonní číslo." }),

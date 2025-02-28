@@ -29,6 +29,7 @@ import {useEffect, useRef, useState} from "react";
 import {formSchema} from "@/schemas/documentsSchema";
 import {ReCAPTCHA} from "react-google-recaptcha";
 import {recaptcha} from "@/constants/constants";
+import {generatePdf, showPdf} from "@/components/docs/PdfComponent";
 
 export function DocumentsForm() {
 
@@ -69,6 +70,7 @@ export function DocumentsForm() {
         }
 
         console.log(values);
+        generatePdf(values, sigCanvas).then(r => {});
 
         // generate pdf
         if (optionalFormIsChecked) {
@@ -149,6 +151,15 @@ export function DocumentsForm() {
 
     return (
         <div className="!mt-10">
+
+            <Button
+                className="bg-button-button-3 hover:bg-button-button-1 text-text-primary hover:text-text-primary"
+                type="button"
+                onClick={generatePdf}
+            >
+                Generate
+            </Button>
+
             <div className="items-top flex space-x-2 !mt-4 !mb-10">
                 <Checkbox
                     id="terms1"
